@@ -56,6 +56,7 @@ header.site .bar {
   color: var(--ink);
   font-weight: 650;
 }
+.brand img { width: 28px; height: 28px; border-radius: 7px; display: block; }
 nav.site { display: flex; gap: .25rem; flex-wrap: wrap; }
 nav.site a {
   text-decoration: none;
