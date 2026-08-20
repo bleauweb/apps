@@ -101,11 +101,42 @@ ul.apps li {
   border-bottom: 1px solid var(--rule);
 }
 .app .body { padding: 1.1rem 1.3rem 1.3rem; }
+/* The app's icon and name, side by side under the cover. */
+.app .head { display: flex; align-items: center; gap: .7rem; }
+.app .head img { width: 44px; height: 44px; border-radius: 10px; display: block; }
 .app .name { font-weight: 650; font-size: 1.1rem; }
 .app .name a { color: var(--ink); text-decoration: none; }
 .app .name a:hover { color: var(--accent); }
-.app .about { color: var(--muted); margin: .2rem 0 .7rem; }
+.app .about { color: var(--muted); margin: .6rem 0 .7rem; }
 .app .pages { display: flex; gap: 1.1rem; flex-wrap: wrap; font-size: .95rem; }
+
+/* What every app here promises — the landing page says it once, up top. */
+ul.promises {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+ul.promises li {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  font-weight: 550;
+  font-size: .92rem;
+  padding: .3rem .85rem;
+  border-radius: 999px;
+}
+
+.band {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  margin: 2.6rem 0 0;
+}
+.band h2 { margin: 0 0 .5rem; font-size: 1.15rem; }
+.band p { color: var(--muted); margin: .5rem 0 0; }
 
 @media (max-width: 740px) {
   ul.apps { grid-template-columns: 1fr; }

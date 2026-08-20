@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BleauWeb Apps</title>
-<meta name="description" content="Small, calm apps for Apple platforms — and every app's support and privacy pages.">
+<meta name="description" content="Small, calm apps for Apple platforms. No notifications, no accounts, no analytics — your data stays in your own Apple services.">
 <meta property="og:site_name" content="BleauWeb Apps">
 <meta property="og:type" content="website">
 <meta property="og:title" content="BleauWeb Apps">
-<meta property="og:description" content="Small, calm apps for Apple platforms — and every app's support and privacy pages.">
+<meta property="og:description" content="Small, calm apps for Apple platforms. No notifications, no accounts, no analytics.">
 <meta property="og:url" content="https://apps.bleauweb.org/">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=2">
 </head>
 <body>
 <header class="site">
@@ -26,21 +26,32 @@
   <div class="wrap wide">
     <div class="prose">
       <h1>Apps by BleauWeb</h1>
-      <p class="tagline">Small, calm apps for Apple platforms. Each one keeps
-      its documents here — what it is, how to get help, and what it does with
-      your data (as little as possible).</p>
+      <p class="tagline">Small, calm apps for Apple platforms — built
+      neurodivergent-friendly first, and quiet on purpose. Each one keeps its
+      documents here: what it is, how to get help, and what it does with your
+      data (as little as possible).</p>
     </div>
+
+    <ul class="promises" aria-label="What every app here promises">
+      <li>Never notifies</li>
+      <li>No accounts</li>
+      <li>No analytics</li>
+      <li>Your data stays in your own Apple services</li>
+    </ul>
 
     <ul class="apps">
       <li class="app">
-        <a href="neuroutine/">
+        <a href="neuroutine/" tabindex="-1" aria-hidden="true">
           <img class="cover" src="neuroutine/og.png" width="1200" height="630" alt="">
         </a>
         <div class="body">
-          <div class="name"><a href="neuroutine/">NeuRoutine</a></div>
-          <p class="about">A calm, low-friction planner for iPhone and iPad,
-          designed neurodivergent-friendly first. One thing at a time,
-          energy on an honest scale — and it never notifies.</p>
+          <div class="head">
+            <img src="neuroutine/icon.png" alt="">
+            <div class="name"><a href="neuroutine/">NeuRoutine</a></div>
+          </div>
+          <p class="about">A calm, low-friction planner for iPhone and iPad.
+          One thing at a time, energy on an honest scale — and it never
+          notifies.</p>
           <div class="pages">
             <a href="neuroutine/">Overview</a>
             <a href="neuroutine/support.html">Support &amp; FAQ</a>
@@ -49,15 +60,17 @@
         </div>
       </li>
       <li class="app">
-        <a href="wiederfind/">
+        <a href="wiederfind/" tabindex="-1" aria-hidden="true">
           <img class="cover" src="wiederfind/og.png" width="1200" height="630" alt="">
         </a>
         <div class="body">
-          <div class="name"><a href="wiederfind/">Wiederfind</a></div>
+          <div class="head">
+            <img src="wiederfind/icon.png" alt="">
+            <div class="name"><a href="wiederfind/">Wiederfind</a></div>
+          </div>
           <p class="about">A calm spaced-repetition app for iPhone, iPad and
-          Mac, designed neurodivergent-friendly first. Lessons at your pace,
-          no timers, no streaks — and it never notifies. Ships with complete
-          German A1 and A2 courses.</p>
+          Mac. Lessons at your pace, no timers, no streaks — ships with
+          complete German A1 and A2 courses.</p>
           <div class="pages">
             <a href="wiederfind/">Overview</a>
             <a href="wiederfind/support.html">Support &amp; FAQ</a>
@@ -66,6 +79,17 @@
         </div>
       </li>
     </ul>
+
+    <div class="band">
+      <h2>Why so quiet?</h2>
+      <p>These apps are built for people who find interruption expensive.
+      None of them send notifications — they never even ask for permission
+      to. There are no streaks, no badges, no scores, and no account to
+      create: everything you make lives in your own Apple services, synced
+      through your own private iCloud, unreadable to us.</p>
+      <p>Questions about any of them, at any size:
+      <a href="mailto:support@bleauweb.org">support@bleauweb.org</a>.</p>
+    </div>
 
     <p class="muted" style="margin-top:2rem">More to come, at their own pace.</p>
   </div>
