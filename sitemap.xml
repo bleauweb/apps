@@ -2,9 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://apps.bleauweb.org/</loc></url>
   <url><loc>https://apps.bleauweb.org/about.html</loc></url>
+  <url><loc>https://apps.bleauweb.org/privacy.html</loc></url>
   <url><loc>https://apps.bleauweb.org/neuroutine/</loc></url>
   <url><loc>https://apps.bleauweb.org/neuroutine/support.html</loc></url>
   <url><loc>https://apps.bleauweb.org/neuroutine/privacy.html</loc></url>
+  <url><loc>https://apps.bleauweb.org/meals/</loc></url>
+  <url><loc>https://apps.bleauweb.org/meals/support.html</loc></url>
+  <url><loc>https://apps.bleauweb.org/meals/privacy.html</loc></url>
   <url><loc>https://apps.bleauweb.org/wiederfind/</loc></url>
   <url><loc>https://apps.bleauweb.org/wiederfind/support.html</loc></url>
   <url><loc>https://apps.bleauweb.org/wiederfind/privacy.html</loc></url>
