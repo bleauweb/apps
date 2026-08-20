@@ -77,6 +77,12 @@ main { padding: 2.75rem 0 4rem; }
 /* The marketing front page gets more room; text columns stay readable. */
 .wrap.wide { max-width: 66rem; }
 
+/* Reading pages (Support, Privacy) sit inside the same wide wrap as the
+   Overview, so every page shares one left edge with the header on desktop.
+   The text itself keeps a readable measure and hugs that shared edge
+   rather than re-centring. */
+.prose { max-width: 42rem; }
+
 .pill {
   display: inline-block;
   background: color-mix(in srgb, var(--accent) 12%, transparent);
