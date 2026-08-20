@@ -1,0 +1,117 @@
+/* The BleauWeb Apps hub, in the same language as the app sites underneath
+   it: the same tokens, the same 14pt-cornered cards, the same header, nav
+   and footer shapes, and the same one-left-edge wrap system. If this file
+   and neuroutine/site.css drift, the domain stops feeling like one place —
+   change them together. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #f7f6fb;
+  --card: #ffffff;
+  --ink: #1c1b22;
+  --muted: #5c5966;
+  --accent: #6d3df0;
+  --rule: #e6e3ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17161c;
+    --card: #211f28;
+    --ink: #f0eef6;
+    --muted: #a49fb3;
+    --accent: #a78bfa;
+    --rule: #322f3d;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem; }
+.wrap.wide { max-width: 66rem; }
+.prose { max-width: 42rem; }
+a { color: var(--accent); }
+
+/* Header */
+header.site { border-bottom: 1px solid var(--rule); }
+header.site .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: .9rem;
+  padding-bottom: .9rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 650;
+}
+nav.site { display: flex; gap: .25rem; flex-wrap: wrap; }
+nav.site a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: .35rem .7rem;
+  border-radius: 9px;
+}
+nav.site a:hover { color: var(--ink); }
+nav.site a:focus-visible, .brand:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Main */
+main { padding: 2.75rem 0 4rem; }
+h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 .25rem; }
+.tagline { color: var(--muted); margin: 0 0 2rem; }
+.muted { color: var(--muted); }
+
+/* One card per app: its icon, its argument, and where its pages live. */
+ul.apps { list-style: none; padding: 0; margin: 0; }
+ul.apps li {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  margin: .8rem 0;
+  padding: 1.2rem 1.3rem;
+}
+.app {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.1rem;
+  align-items: start;
+}
+.app img {
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+  display: block;
+}
+.app .name { font-weight: 650; font-size: 1.1rem; }
+.app .name a { color: var(--ink); text-decoration: none; }
+.app .name a:hover { color: var(--accent); }
+.app .about { color: var(--muted); margin: .2rem 0 .6rem; }
+.app .pages { display: flex; gap: 1.1rem; flex-wrap: wrap; font-size: .95rem; }
+
+@media (max-width: 480px) {
+  .app { grid-template-columns: 48px 1fr; }
+  .app img { width: 48px; height: 48px; border-radius: 11px; }
+}
+
+/* Footer */
+footer.site {
+  border-top: 1px solid var(--rule);
+  padding: 1.6rem 0 3rem;
+  color: var(--muted);
+  font-size: .92rem;
+}
+footer.site p { margin: .3rem 0; }

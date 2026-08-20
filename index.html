@@ -4,75 +4,78 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BleauWeb Apps</title>
-<meta name="description" content="Documents and policies for BleauWeb's iOS apps.">
+<meta name="description" content="Small, calm apps for Apple platforms — and every app's support and privacy pages.">
 <meta property="og:site_name" content="BleauWeb Apps">
 <meta property="og:type" content="website">
 <meta property="og:title" content="BleauWeb Apps">
-<meta property="og:description" content="Documents and policies for BleauWeb's iOS apps.">
+<meta property="og:description" content="Small, calm apps for Apple platforms — and every app's support and privacy pages.">
 <meta property="og:url" content="https://apps.bleauweb.org/">
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #f7f6fb;
-    --card: #ffffff;
-    --ink: #1c1b22;
-    --muted: #5c5966;
-    --accent: #6d3df0;
-    --rule: #e6e3ef;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #17161c;
-      --card: #211f28;
-      --ink: #f0eef6;
-      --muted: #a49fb3;
-      --accent: #a78bfa;
-      --rule: #322f3d;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 3.5rem 1.25rem 4rem;
-  }
-  h1 { font-size: 1.8rem; margin: 0 0 .4rem; }
-  .tagline { color: var(--muted); margin: 0 0 2rem; }
-  ul.apps { list-style: none; padding: 0; margin: 0; }
-  ul.apps li {
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-radius: 14px;
-    margin: .6rem 0;
-  }
-  ul.apps a {
-    display: block;
-    padding: 1rem 1.2rem;
-    text-decoration: none;
-  }
-  ul.apps .name { color: var(--accent); font-weight: 600; }
-  ul.apps .about { color: var(--muted); font-size: .92rem; margin-top: .15rem; }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+<header class="site">
+  <div class="wrap wide bar">
+    <a class="brand" href="./"><span>BleauWeb Apps</span></a>
+    <nav class="site" aria-label="Site">
+      <a href="mailto:support@bleauweb.org">Support</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <h1>BleauWeb Apps</h1>
-  <p class="tagline">Documents and policies for BleauWeb's iOS apps.</p>
-  <ul class="apps">
-    <li>
-      <a href="neuroutine/">
-        <div class="name">NeuRoutine</div>
-        <div class="about">A calm, low-friction planner, designed neurodivergent-friendly first.</div>
-      </a>
-    </li>
-  </ul>
+  <div class="wrap wide">
+  <div class="prose">
+    <h1>Apps by BleauWeb</h1>
+    <p class="tagline">Small, calm apps for Apple platforms. Each one keeps
+    its documents here — what it is, how to get help, and what it does with
+    your data (as little as possible).</p>
+
+    <ul class="apps">
+      <li>
+        <div class="app">
+          <img src="neuroutine/icon.png" alt="">
+          <div>
+            <div class="name"><a href="neuroutine/">NeuRoutine</a></div>
+            <p class="about">A calm, low-friction planner for iPhone and iPad,
+            designed neurodivergent-friendly first. One thing at a time,
+            energy on an honest scale — and it never notifies.</p>
+            <div class="pages">
+              <a href="neuroutine/">Overview</a>
+              <a href="neuroutine/support.html">Support &amp; FAQ</a>
+              <a href="neuroutine/privacy.html">Privacy</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="app">
+          <img src="wiederfind/icon.png" alt="">
+          <div>
+            <div class="name"><a href="wiederfind/">Wiederfind</a></div>
+            <p class="about">A calm spaced-repetition app for iPhone, iPad and
+            Mac, designed neurodivergent-friendly first. Lessons at your pace,
+            no timers, no streaks — and it never notifies. Ships with complete
+            German A1 and A2 courses.</p>
+            <div class="pages">
+              <a href="wiederfind/">Overview</a>
+              <a href="wiederfind/support.html">Support &amp; FAQ</a>
+              <a href="wiederfind/privacy.html">Privacy</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <p class="muted" style="margin-top:2rem">More to come, at their own pace.</p>
+  </div>
+  </div>
 </main>
+
+<footer class="site">
+  <div class="wrap wide">
+    <p>Questions, at any size: <a href="mailto:support@bleauweb.org">support@bleauweb.org</a></p>
+    <p>© 2026 BleauWeb</p>
+  </div>
+</footer>
 </body>
 </html>
