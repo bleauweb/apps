@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeuRoutine</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f6fb;
+    --card: #ffffff;
+    --ink: #1c1b22;
+    --muted: #5c5966;
+    --accent: #6d3df0;
+    --rule: #e6e3ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17161c;
+      --card: #211f28;
+      --ink: #f0eef6;
+      --muted: #a49fb3;
+      --accent: #a78bfa;
+      --rule: #322f3d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 4rem;
+  }
+  h1 { font-size: 1.8rem; margin: 0 0 .4rem; }
+  .tagline { color: var(--muted); margin: 0 0 2rem; }
+  ul.docs { list-style: none; padding: 0; margin: 0; }
+  ul.docs li {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    margin: .6rem 0;
+  }
+  ul.docs a {
+    display: block;
+    padding: 1rem 1.2rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .muted { color: var(--muted); font-size: .9rem; margin-top: 2.5rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>NeuRoutine</h1>
+  <p class="tagline">A calm, low-friction planner, designed autism-friendly
+  first. Your plans stay in your own Calendar, Reminders and iCloud — and the
+  app never notifies.</p>
+  <ul class="docs">
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+  <p class="muted">Documents published here are the ones the App Store links
+  to. New pages added to the repository's <code>Docs/</code> folder appear
+  automatically.</p>
+</main>
+</body>
+</html>
