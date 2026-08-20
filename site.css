@@ -128,6 +128,16 @@ ul.promises li {
   border-radius: 999px;
 }
 
+/* The mission, in a card of its own on the About page. */
+.lead {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  font-weight: 500;
+}
+h2 { font-size: 1.15rem; margin: 2.2rem 0 .6rem; }
+
 .band {
   background: var(--card);
   border: 1px solid var(--rule);
