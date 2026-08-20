@@ -4,213 +4,148 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NeuRoutine — Support</title>
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #f7f6fb;
-    --card: #ffffff;
-    --ink: #1c1b22;
-    --muted: #5c5966;
-    --accent: #6d3df0;
-    --rule: #e6e3ef;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #17161c;
-      --card: #211f28;
-      --ink: #f0eef6;
-      --muted: #a49fb3;
-      --accent: #a78bfa;
-      --rule: #322f3d;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 3rem 1.25rem 4rem;
-  }
-  h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 .25rem; }
-  .tagline { color: var(--muted); margin: 0 0 2rem; }
-  h2 { font-size: 1.15rem; margin: 2.4rem 0 .8rem; }
-  a { color: var(--accent); }
-  .contact {
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-radius: 14px;
-    padding: 1rem 1.2rem;
-    font-weight: 500;
-  }
-  details.qa {
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-radius: 14px;
-    margin: .6rem 0;
-  }
-  details.qa summary {
-    list-style: none;
-    cursor: pointer;
-    padding: 1rem 2.8rem 1rem 1.2rem;
-    font-weight: 500;
-    position: relative;
-  }
-  details.qa summary::-webkit-details-marker { display: none; }
-  /* One quiet glyph, and no motion: + means "there is more", − means "shown". */
-  details.qa summary::after {
-    content: "+";
-    position: absolute;
-    right: 1.2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--accent);
-    font-size: 1.3rem;
-    line-height: 1;
-  }
-  details.qa[open] summary::after { content: "−"; }
-  details.qa summary:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: -2px;
-    border-radius: 14px;
-  }
-  details.qa .answer { padding: 0 1.2rem 1.1rem; }
-  details.qa .answer p { margin: 0 0 .6rem; }
-  details.qa .answer p:last-child { margin-bottom: 0; }
-  .muted { color: var(--muted); }
-  nav.crumb { margin-bottom: 2rem; font-size: .9rem; }
-</style>
+<meta name="description" content="Support and frequently asked questions for NeuRoutine.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="./"><img src="icon.png" alt=""><span>NeuRoutine</span></a>
+    <nav class="site" aria-label="Site">
+      <a href="./">Overview</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <nav class="crumb"><a href="./">NeuRoutine</a> · Support</nav>
-  <h1>Support</h1>
-  <p class="tagline">Every question is welcome, including the ones that feel
-  too small to ask.</p>
+  <div class="wrap">
+    <h1>Support</h1>
+    <p class="tagline">Every question is welcome, including the ones that feel
+    too small to ask.</p>
 
-  <p class="contact">The fastest way to get help is email:
-  <a href="mailto:support@bleauweb.org">support@bleauweb.org</a>.
-  Describe what happened in your own words — screenshots help if they are
-  easy for you, and are never required.</p>
+    <p class="contact">The fastest way to get help is email:
+    <a href="mailto:support@bleauweb.org">support@bleauweb.org</a>.
+    Describe what happened in your own words — screenshots help if they are
+    easy for you, and are never required.</p>
 
-  <h2>Questions, answered</h2>
+    <h2>Questions, answered</h2>
 
-  <details class="qa" id="storage">
-    <summary>Where is my data stored?</summary>
-    <div class="answer">
-      <p>In your own Apple services, nowhere else. Entries are real events and
-      reminders in your Calendar and Reminders. The details Apple's apps have no
-      place for — energy, steps, which days a repeat was completed — live on
-      your device and sync through the private iCloud attached to your Apple
-      Account. There is no NeuRoutine server and no account to create. The full
-      story is the <a href="privacy.html">privacy policy</a>.</p>
-    </div>
-  </details>
+    <details class="qa" id="storage">
+      <summary>Where is my data stored?</summary>
+      <div class="answer">
+        <p>In your own Apple services, nowhere else. Entries are real events and
+        reminders in your Calendar and Reminders. The details Apple's apps have no
+        place for — energy, steps, which days a repeat was completed — live on
+        your device and sync through the private iCloud attached to your Apple
+        Account. There is no NeuRoutine server and no account to create. The full
+        story is the <a href="privacy.html">privacy policy</a>.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="access">
-    <summary>Why does the app ask for full access to Calendar and Reminders?</summary>
-    <div class="answer">
-      <p>Because that is where your plans are stored — asking is the honest
-      price of keeping your data in your own apps instead of somewhere private
-      to us. NeuRoutine writes only into the calendar and list it creates for
-      itself; everything else it can see is read-only, and only if you switch
-      it on in Settings.</p>
-    </div>
-  </details>
+    <details class="qa" id="access">
+      <summary>Why does the app ask for full access to Calendar and Reminders?</summary>
+      <div class="answer">
+        <p>Because that is where your plans are stored — asking is the honest
+        price of keeping your data in your own apps instead of somewhere private
+        to us. NeuRoutine writes only into the calendar and list it creates for
+        itself; everything else it can see is read-only, and only if you switch
+        it on in Settings.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="missing">
-    <summary>Why don't my work meetings (or birthdays, or holidays) show up?</summary>
-    <div class="answer">
-      <p>By choice, NeuRoutine starts by showing only its own calendar and its
-      own list. A day that opens onto every meeting, feed and birthday the
-      phone knows about is the wall the app exists to avoid. Any calendar can
-      be added in <span class="muted">Settings → Calendars</span> — one switch
-      each — and its entries then count on your day. They stay editable where
-      they came from, but you can give them an energy number.</p>
-    </div>
-  </details>
+    <details class="qa" id="missing">
+      <summary>Why don't my work meetings (or birthdays, or holidays) show up?</summary>
+      <div class="answer">
+        <p>By choice, NeuRoutine starts by showing only its own calendar and its
+        own list. A day that opens onto every meeting, feed and birthday the
+        phone knows about is the wall the app exists to avoid. Any calendar can
+        be added in <span class="muted">Settings → Calendars</span> — one switch
+        each — and its entries then count on your day. They stay editable where
+        they came from, but you can give them an energy number.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="notifications">
-    <summary>Does NeuRoutine send notifications?</summary>
-    <div class="answer">
-      <p>No — never, and on purpose. No alerts, no badges, no reminders to do
-      things, and it never asks for notification permission. The app shows you
-      your day when you open it and is silent when you don't.</p>
-    </div>
-  </details>
+    <details class="qa" id="notifications">
+      <summary>Does NeuRoutine send notifications?</summary>
+      <div class="answer">
+        <p>No — never, and on purpose. No alerts, no badges, no reminders to do
+        things, and it never asks for notification permission. The app shows you
+        your day when you open it and is silent when you don't.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="energy">
-    <summary>What does the energy number mean?</summary>
-    <div class="answer">
-      <p>What something will take out of you, on a deliberately small scale:
-      0, 1, 2, 3, 5, 8, 13. The gaps widen as the numbers grow because nobody
-      can tell a 6 from a 7 — and being asked to is its own small tax. Zero is
-      a real answer ("has to happen, costs nothing"), and so is leaving
-      something unsized.</p>
-    </div>
-  </details>
+    <details class="qa" id="energy">
+      <summary>What does the energy number mean?</summary>
+      <div class="answer">
+        <p>What something will take out of you, on a deliberately small scale:
+        0, 1, 2, 3, 5, 8, 13. The gaps widen as the numbers grow because nobody
+        can tell a 6 from a 7 — and being asked to is its own small tax. Zero is
+        a real answer ("has to happen, costs nothing"), and so is leaving
+        something unsized.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="budget">
-    <summary>Why can't I change the daily budget of 13?</summary>
-    <div class="answer">
-      <p>Because a dial there would get turned up on exactly the day it should
-      not be — the week that is already too much is the week you decide you can
-      take fifteen. A day asking more than 13 says so in a sentence; that is a
-      fact about the day, not about you.</p>
-    </div>
-  </details>
+    <details class="qa" id="budget">
+      <summary>Why can't I change the daily budget of 13?</summary>
+      <div class="answer">
+        <p>Because a dial there would get turned up on exactly the day it should
+        not be — the week that is already too much is the week you decide you can
+        take fifteen. A day asking more than 13 says so in a sentence; that is a
+        fact about the day, not about you.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="apple-apps">
-    <summary>Can I edit entries in Apple's Calendar and Reminders?</summary>
-    <div class="answer">
-      <p>Yes — they are ordinary events and reminders, and edits made there
-      show up in NeuRoutine on their own. Completing a repeating reminder in
-      Apple's Reminders counts here too: the day you carried it is recorded.
-      One nuance: a repeat rule NeuRoutine cannot express (say, every second
-      Tuesday) is shown faithfully but edited only in Apple's apps — the app
-      will never rewrite a rule it does not fully understand.</p>
-    </div>
-  </details>
+    <details class="qa" id="apple-apps">
+      <summary>Can I edit entries in Apple's Calendar and Reminders?</summary>
+      <div class="answer">
+        <p>Yes — they are ordinary events and reminders, and edits made there
+        show up in NeuRoutine on their own. Completing a repeating reminder in
+        Apple's Reminders counts here too: the day you carried it is recorded.
+        One nuance: a repeat rule NeuRoutine cannot express (say, every second
+        Tuesday) is shown faithfully but edited only in Apple's apps — the app
+        will never rewrite a rule it does not fully understand.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="drag">
-    <summary>Why does a dragged entry sometimes spring back?</summary>
-    <div class="answer">
-      <p>The day never runs backwards in time: a morning task cannot be placed
-      after an afternoon appointment, because 14:00 does not come before 09:00.
-      Anything without a time can go anywhere. The row returning is the app
-      saying "not there" without a dialog to dismiss.</p>
-    </div>
-  </details>
+    <details class="qa" id="drag">
+      <summary>Why does a dragged entry sometimes spring back?</summary>
+      <div class="answer">
+        <p>The day never runs backwards in time: a morning task cannot be placed
+        after an afternoon appointment, because 14:00 does not come before 09:00.
+        Anything without a time can go anywhere. The row returning is the app
+        saying "not there" without a dialog to dismiss.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="sync">
-    <summary>How do I set up sync?</summary>
-    <div class="answer">
-      <p>You don't — being signed in to iCloud is the whole setup. Entries
-      travel with your calendars, details travel through your private iCloud,
-      and everything keeps working offline in the meantime.
-      <span class="muted">Settings → iCloud</span> in the app shows where
-      things currently live.</p>
-    </div>
-  </details>
+    <details class="qa" id="sync">
+      <summary>How do I set up sync?</summary>
+      <div class="answer">
+        <p>You don't — being signed in to iCloud is the whole setup. Entries
+        travel with your calendars, details travel through your private iCloud,
+        and everything keeps working offline in the meantime.
+        <span class="muted">Settings → iCloud</span> in the app shows where
+        things currently live.</p>
+      </div>
+    </details>
 
-  <details class="qa" id="delete">
-    <summary>How do I delete my data?</summary>
-    <div class="answer">
-      <p>Delete entries in the app (behind Edit, deliberately) or in Apple's
-      apps. Deleting the app removes everything on the device; the synced
-      details can be removed from iCloud under
-      <span class="muted">Settings → your name → iCloud → Manage Account
-      Storage</span>. Nothing exists anywhere else to delete.</p>
-    </div>
-  </details>
+    <details class="qa" id="delete">
+      <summary>How do I delete my data?</summary>
+      <div class="answer">
+        <p>Delete entries in the app (behind Edit, deliberately) or in Apple's
+        apps. Deleting the app removes everything on the device; the synced
+        details can be removed from iCloud under
+        <span class="muted">Settings → your name → iCloud → Manage Account
+        Storage</span>. Nothing exists anywhere else to delete.</p>
+      </div>
+    </details>
 
-  <p class="muted" style="margin-top:2rem">Didn't find your question? Ask it:
-  <a href="mailto:support@bleauweb.org">support@bleauweb.org</a>.</p>
+    <p class="muted" style="margin-top:2rem">Didn't find your question? Ask it:
+    <a href="mailto:support@bleauweb.org">support@bleauweb.org</a>.</p>
+  </div>
 
   <script>
     // A shared link like support.html#energy should land on its question
@@ -224,5 +159,13 @@
     addEventListener('hashchange', openTarget);
   </script>
 </main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>NeuRoutine</strong> is a <a href="../">BleauWeb</a> app.</p>
+    <p>Questions, at any size: <a href="mailto:support@bleauweb.org">support@bleauweb.org</a></p>
+    <p>© 2026 BleauWeb</p>
+  </div>
+</footer>
 </body>
 </html>

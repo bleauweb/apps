@@ -1,0 +1,146 @@
+/* NeuRoutine's site, in the app's own visual language: the violet accent,
+   14pt-cornered cards, generous spacing, one accent per screen, and both
+   appearances. One stylesheet so the three pages cannot drift apart. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #f7f6fb;
+  --card: #ffffff;
+  --ink: #1c1b22;
+  --muted: #5c5966;
+  --accent: #6d3df0;
+  --rule: #e6e3ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17161c;
+    --card: #211f28;
+    --ink: #f0eef6;
+    --muted: #a49fb3;
+    --accent: #a78bfa;
+    --rule: #322f3d;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem; }
+a { color: var(--accent); }
+
+/* Header and navigation */
+header.site { border-bottom: 1px solid var(--rule); }
+header.site .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: .9rem;
+  padding-bottom: .9rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 650;
+}
+.brand img { width: 28px; height: 28px; border-radius: 7px; display: block; }
+nav.site { display: flex; gap: .25rem; flex-wrap: wrap; }
+nav.site a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: .35rem .7rem;
+  border-radius: 9px;
+}
+nav.site a:hover { color: var(--ink); }
+nav.site a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+nav.site a:focus-visible, .brand:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Main */
+main { padding: 2.75rem 0 4rem; }
+h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 .25rem; }
+h2 { font-size: 1.15rem; margin: 2.4rem 0 .8rem; }
+.tagline { color: var(--muted); margin: 0 0 2rem; }
+.updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+.muted { color: var(--muted); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0 1.5rem; }
+ul { padding-left: 1.2rem; }
+li { margin: .35rem 0; }
+
+/* Cards */
+.card, .lead, .contact, .feature {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+}
+.lead, .contact { font-weight: 500; }
+.feature { margin: .6rem 0; }
+.feature h3 { margin: 0 0 .3rem; font-size: 1.02rem; }
+.feature p { margin: 0; color: var(--muted); }
+
+/* The home page's quiet "not yet" note. */
+.soon {
+  margin-top: 2.2rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* FAQ accordions: the browser's own <details>, no motion, a quiet +/-. */
+details.qa {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  margin: .6rem 0;
+}
+details.qa summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 2.8rem 1rem 1.2rem;
+  font-weight: 500;
+  position: relative;
+}
+details.qa summary::-webkit-details-marker { display: none; }
+details.qa summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+details.qa[open] summary::after { content: "−"; }
+details.qa summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: 14px;
+}
+details.qa .answer { padding: 0 1.2rem 1.1rem; }
+details.qa .answer p { margin: 0 0 .6rem; }
+details.qa .answer p:last-child { margin-bottom: 0; }
+
+/* Footer */
+footer.site {
+  border-top: 1px solid var(--rule);
+  padding: 1.6rem 0 3rem;
+  color: var(--muted);
+  font-size: .92rem;
+}
+footer.site p { margin: .3rem 0; }

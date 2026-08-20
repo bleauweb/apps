@@ -4,70 +4,89 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NeuRoutine</title>
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #f7f6fb;
-    --card: #ffffff;
-    --ink: #1c1b22;
-    --muted: #5c5966;
-    --accent: #6d3df0;
-    --rule: #e6e3ef;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #17161c;
-      --card: #211f28;
-      --ink: #f0eef6;
-      --muted: #a49fb3;
-      --accent: #a78bfa;
-      --rule: #322f3d;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 3.5rem 1.25rem 4rem;
-  }
-  h1 { font-size: 1.8rem; margin: 0 0 .4rem; }
-  .tagline { color: var(--muted); margin: 0 0 2rem; }
-  ul.docs { list-style: none; padding: 0; margin: 0; }
-  ul.docs li {
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-radius: 14px;
-    margin: .6rem 0;
-  }
-  ul.docs a {
-    display: block;
-    padding: 1rem 1.2rem;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .muted { color: var(--muted); font-size: .9rem; margin-top: 2.5rem; }
-</style>
+<meta name="description" content="A calm, low-friction planner, designed neurodivergent-friendly first. One thing at a time, energy on a fixed scale, and it never notifies.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="./"><img src="icon.png" alt=""><span>NeuRoutine</span></a>
+    <nav class="site" aria-label="Site">
+      <a href="./" aria-current="page">Overview</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <h1>NeuRoutine</h1>
-  <p class="tagline">A calm, low-friction planner, designed neurodivergent-friendly
-  first. Your plans stay in your own Calendar, Reminders and iCloud — and the
-  app never notifies.</p>
-  <ul class="docs">
-    <li><a href="support.html">Support &amp; FAQ</a></li>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-  </ul>
-  <p class="muted">Need a hand? <a href="mailto:support@bleauweb.org">support@bleauweb.org</a>
-  answers every question, including the ones that feel too small to ask.</p>
+  <div class="wrap">
+    <h1>A planner that stays calm</h1>
+    <p class="tagline">NeuRoutine is a low-friction planner for iPhone and
+    iPad, designed neurodivergent-friendly first: one thing at a time, energy
+    on an honest scale, and no interruptions — ever.</p>
+
+    <div class="feature">
+      <h3>One thing at a time</h3>
+      <p>Today opens on the single thing that is up now, with one Done button
+      and a quiet "then:" underneath. The full month exists, but it is never
+      the front door — a wall of thirty-five days is exactly what this app is
+      built not to hand you.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Energy, not just time</h3>
+      <p>Anything can carry an energy number — 0, 1, 2, 3, 5, 8 or 13 — and
+      every day has the same fixed budget of 13. The meter reports what the
+      day asks and what is left; it never tells you what to do about it. A day
+      that asks for more than 13 says so in a sentence: a fact about the day,
+      not about you.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Big things break down</h3>
+      <p>Any entry can hold small steps, and the focus card always names the
+      next one. Capture asks exactly two things — what it is, and what it will
+      cost — because every extra decision is a reason not to write the thing
+      down at all.</p>
+    </div>
+
+    <div class="feature">
+      <h3>It never interrupts</h3>
+      <p>No notifications, no badges, no nudges about what is still undone,
+      and it never even asks for permission to notify. NeuRoutine shows you
+      your day when you open it, and is silent when you don't.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Your data stays yours</h3>
+      <p>Entries are real events and reminders in your own Calendar and
+      Reminders — usable in Apple's apps, on every device you already have.
+      The rest syncs through your private iCloud. No account, no server,
+      nothing collected. The <a href="privacy.html">privacy policy</a> is one
+      page because there is almost nothing to say.</p>
+    </div>
+
+    <div class="feature">
+      <h3>At home on the platform</h3>
+      <p>An On-deck widget with its own Done button, Lock Screen rings for
+      progress and energy, a Control Centre capture button, and Siri
+      shortcuts for adding, completing and asking how the day is going.</p>
+    </div>
+
+    <p class="soon">NeuRoutine is on its way to the App Store. Questions in
+    the meantime are welcome on the <a href="support.html">support page</a>.</p>
+  </div>
 </main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>NeuRoutine</strong> is a <a href="../">BleauWeb</a> app.</p>
+    <p>Questions, at any size: <a href="mailto:support@bleauweb.org">support@bleauweb.org</a></p>
+    <p>© 2026 BleauWeb</p>
+  </div>
+</footer>
 </body>
 </html>
