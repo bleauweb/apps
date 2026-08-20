@@ -119,10 +119,43 @@ main { padding: 2.75rem 0 4rem; }
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   align-items: center;
-  margin: 3.2rem 0;
+  margin: 3.6rem 0;
 }
 .row h2 { margin-top: 0; }
 .row p { color: var(--muted); }
+
+/* UI excerpts: real pieces of the interface, shown at reading size instead
+   of shrunk inside yet another phone. */
+.shots { display: grid; gap: .9rem; align-content: center; }
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.1rem;
+  border: 1px solid var(--rule);
+  box-shadow: 0 12px 36px rgba(24, 12, 60, .10);
+}
+/* The widget is a little square of home screen; give it tile proportions. */
+.tile {
+  display: block;
+  width: min(280px, 88%);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 1.6rem;
+  border: 1px solid var(--rule);
+  box-shadow: 0 16px 44px rgba(24, 12, 60, .16);
+}
+
+/* A full-width quiet band for the privacy story. */
+.band {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1.6rem 1.6rem;
+  margin: 3.6rem 0;
+}
+.band h2 { margin: 0 0 .5rem; }
+.band p { color: var(--muted); margin: .5rem 0 0; }
 
 .grid {
   display: grid;
