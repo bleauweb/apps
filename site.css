@@ -139,6 +139,30 @@ ul.promises li {
 }
 h2 { font-size: 1.15rem; margin: 2.2rem 0 .6rem; }
 
+/* About's value sections: words on one side, a drawn figure on the other,
+   sides alternating. The figures are inline SVG on the site's own colour
+   tokens, so they redraw themselves in dark mode. */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin: 2.8rem 0;
+}
+.row h2 { margin-top: 0; }
+.row p { color: var(--muted); }
+.art {
+  display: block;
+  width: min(300px, 85%);
+  height: auto;
+  margin: 0 auto;
+}
+@media (max-width: 740px) {
+  .row { grid-template-columns: 1fr; gap: 1.4rem; }
+  /* On one column the words come first, whatever the markup order was. */
+  .row .media { order: 1; }
+}
+
 .band {
   background: var(--card);
   border: 1px solid var(--rule);
