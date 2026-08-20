@@ -73,6 +73,70 @@ nav.site a:focus-visible, .brand:focus-visible {
 
 /* Main */
 main { padding: 2.75rem 0 4rem; }
+
+/* The marketing front page gets more room; text columns stay readable. */
+.wrap.wide { max-width: 66rem; }
+
+.pill {
+  display: inline-block;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: .9rem;
+  padding: .35rem .95rem;
+  border-radius: 999px;
+}
+
+/* Screenshots sit in a quiet device-ish frame. No motion, no tilt. */
+.phone {
+  width: min(300px, 82%);
+  margin: 0 auto;
+  border: 1px solid var(--rule);
+  border-radius: 2.4rem;
+  padding: .6rem;
+  background: var(--card);
+  box-shadow: 0 24px 70px rgba(24, 12, 60, .13);
+}
+.phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.9rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 1rem 0 2rem;
+}
+.hero h1 { font-size: 2.35rem; }
+.hero .tagline { font-size: 1.12rem; margin-bottom: 1.4rem; }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin: 3.2rem 0;
+}
+.row h2 { margin-top: 0; }
+.row p { color: var(--muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+}
+.grid .feature { margin: 0; }
+
+@media (max-width: 740px) {
+  .hero, .row, .grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.9rem; }
+  /* On one column the words come first, whatever the markup order was. */
+  .row .media { order: 1; }
+}
 h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 .25rem; }
 h2 { font-size: 1.15rem; margin: 2.4rem 0 .8rem; }
 .tagline { color: var(--muted); margin: 0 0 2rem; }
