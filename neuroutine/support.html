@@ -32,7 +32,7 @@
    "name": "Where is my data stored?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "In your own Apple services, nowhere else. Entries are real events and reminders in your Calendar and Reminders. The details Apple's apps have no place for — energy, steps, which days a repeat was completed — live on your device and sync through the private iCloud attached to your Apple Account. There is no NeuRoutine server and no account to create. The full story is the privacy policy."
+    "text": "In your own Apple services, nowhere else. Entries are real events and reminders in your Calendar and Reminders. The details Apple's apps have no place for — energy, steps, categories, which days a repeat was carried or let go of — live on your device and sync through the private iCloud attached to your Apple Account. There is no NeuRoutine server and no account to create. The full story is the privacy policy."
    }
   },
   {
@@ -69,10 +69,34 @@
   },
   {
    "@type": "Question",
+   "name": "What are categories for?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Keeping work things and home things apart, or whatever your days actually divide into. Everything starts in Todo; add your own in Settings → Categories and pick which one new entries take by default. You are never asked to choose one while writing something down — capture stays two fields — and any entry can be re-filed later from its Edit details. The Energy tab totals each category over the window you pick, so \"where did it all go?\" has an answer."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Why can't I change the daily budget of 13?",
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Because a dial there would get turned up on exactly the day it should not be — the week that is already too much is the week you decide you can take fifteen. A day asking more than 13 says so in a sentence; that is a fact about the day, not about you."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if I don't do a repeating thing one day?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Open it and choose Skip just today. That is not a missed day and not a completed one: the day costs nothing, nothing counts it as carried, and the routine arrives tomorrow exactly as it would have. It is reversible — the same button offers to put the day back. If a whole day ends up let go of, the app says so plainly rather than congratulating you: a decision, not a failure."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I move something without deleting it?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — open it, and under Not right now: move it to tomorrow, to the end of the day, or back to the inbox. (A repeat gets Skip just today instead of tomorrow, because its day is the anchor its whole series counts from — moving it would move every occurrence.) Plain buttons, not a hidden swipe, and every one of them can be undone."
    }
   },
   {
@@ -141,7 +165,8 @@
       <div class="answer">
         <p>In your own Apple services, nowhere else. Entries are real events and
         reminders in your Calendar and Reminders. The details Apple's apps have no
-        place for — energy, steps, which days a repeat was completed — live on
+        place for — energy, steps, categories, which days a repeat was carried
+        or let go of — live on
         your device and sync through the private iCloud attached to your Apple
         Account. There is no NeuRoutine server and no account to create. The full
         story is the <a href="privacy.html">privacy policy</a>.</p>
@@ -191,6 +216,20 @@
       </div>
     </details>
 
+    <details class="qa" id="categories">
+      <summary>What are categories for?</summary>
+      <div class="answer">
+        <p>Keeping work things and home things apart, or whatever your days
+        actually divide into. Everything starts in <strong>Todo</strong>; add
+        your own in <span class="muted">Settings → Categories</span> and pick
+        which one new entries take by default. You are never asked to choose
+        one while writing something down — capture stays two fields — and any
+        entry can be re-filed later from its Edit details. The Energy tab
+        totals each category over the window you pick, so "where did it all
+        go?" has an answer.</p>
+      </div>
+    </details>
+
     <details class="qa" id="budget">
       <summary>Why can't I change the daily budget of 13?</summary>
       <div class="answer">
@@ -198,6 +237,30 @@
         not be — the week that is already too much is the week you decide you can
         take fifteen. A day asking more than 13 says so in a sentence; that is a
         fact about the day, not about you.</p>
+      </div>
+    </details>
+
+    <details class="qa" id="skip">
+      <summary>What if I don't do a repeating thing one day?</summary>
+      <div class="answer">
+        <p>Open it and choose <strong>Skip just today</strong>. That is not a
+        missed day and not a completed one: the day costs nothing, nothing
+        counts it as carried, and the routine arrives tomorrow exactly as it
+        would have. It is reversible — the same button offers to put the day
+        back. If a whole day ends up let go of, the app says so plainly rather
+        than congratulating you: a decision, not a failure.</p>
+      </div>
+    </details>
+
+    <details class="qa" id="move">
+      <summary>Can I move something without deleting it?</summary>
+      <div class="answer">
+        <p>Yes — open it, and under <em>Not right now</em>: move it to
+        tomorrow, to the end of the day, or back to the inbox. (A repeat gets
+        <em>Skip just today</em> instead of tomorrow, because its day is the
+        anchor its whole series counts from — moving it would move every
+        occurrence.) Plain buttons, not a hidden swipe, and every one of them
+        can be undone.</p>
       </div>
     </details>
 
