@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we build</title>
+<meta name="description" content="The thirteen rules every BleauWeb app is built on — worked out by getting them wrong first — and where the apps do not yet live up to them.">
+<meta property="og:site_name" content="BleauWeb Apps">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How we build">
+<meta property="og:description" content="Thirteen rules for apps that help rather than hurry, worked out by getting them wrong first.">
+<meta property="og:url" content="https://apps.bleauweb.org/principles.html">
+<meta property="og:image" content="https://apps.bleauweb.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BleauWeb Apps — small, calm apps for Apple platforms.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="site.css?v=10">
+<link rel="canonical" href="https://apps.bleauweb.org/principles.html">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f6fb">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17161c">
+</head>
+<body class="reading">
+<header class="site">
+  <div class="wrap wide bar">
+    <a class="brand" href="./"><img src="icon.png" alt=""><span>BleauWeb Apps</span></a>
+    <nav class="site" aria-label="Site">
+      <a href="./">Apps</a>
+      <a href="downloads.html">Mac</a>
+      <a href="principles.html" aria-current="page">How we build</a>
+      <a href="about.html">About</a>
+      <a href="mailto:support@bleauweb.org">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap wide">
+    <h1>How we build</h1>
+    <p class="tagline">Thirteen rules, worked out by getting most of them wrong
+    first.</p>
+
+    <p>These apps are built for people whose attention, memory and energy do not
+    behave the way software usually assumes — autistic people, people with ADHD,
+    and anyone for whom an ordinary planner is one more thing to manage. That is
+    not a feature list. It is a set of constraints, and the rules below are what
+    is left after applying them for a couple of years.</p>
+
+    <p>Most of them came out of <a href="neuroutine/">NeuRoutine</a>, which is
+    the oldest and the most opinionated, and they were checked against the other
+    apps before being written down here. A few were learned the expensive way,
+    and those say so. The last section is the honest one: where the apps do not
+    yet do what this page says they do.</p>
+
+    <div class="pgroup">
+      <h2>What the screen puts in front of you</h2>
+
+      <div class="principle">
+        <div class="n">1</div>
+        <div>
+          <h3>One thing at a time</h3>
+          <p>The front door shows the single next thing, not the list. A wall of
+          items is not information, it is a decision, and the moment you need an
+          app like this is exactly the moment you have no decisions left.</p>
+          <p class="where"><b>NeuRoutine</b> opens on Now: one title, one Done
+          button, and a quiet "then:" underneath. <b>Meals</b> names the next
+          meal that is not logged and nothing else. <b>Wiederfind</b> shows one
+          card. The list is always one tap away and never the first thing.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">2</div>
+        <div>
+          <h3>Quiet, still, and legible</h3>
+          <p>Nothing moves that was not asked to move. No sound, nothing
+          autoplays, no bouncing, no confetti. Colour never carries meaning on
+          its own, and contrast is measured rather than assumed — every value
+          sits in the code next to the ratio it was tested at.</p>
+          <p class="where">All three apps honour Reduce Motion and largely have
+          nothing to reduce. Two accent colours instead of one, because a single
+          violet cannot both be readable as text and carry white on a filled
+          button — the first one we shipped failed at 2.90:1 in dark mode.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">3</div>
+        <div>
+          <h3>Time has to be visible</h3>
+          <p>An app for people who lose track of time must be able to answer
+          <em>what now, and how long have I got</em> without being asked and
+          without making a sound. A clock time is a number you still have to do
+          arithmetic on; "in 25 min" is the answer.</p>
+          <p class="where">The newest rule here, and the most embarrassing:
+          NeuRoutine went two years showing only clock times, in an app built
+          around time blindness. It now says "in 25 min", "on now · 20 min
+          left", "10 min ago" — on the phone, the Home Screen and the Lock
+          Screen. It rounds down, so it never claims more time than there is,
+          and it goes quiet past eight hours rather than keeping score.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <h2>What the app asks of you</h2>
+
+      <div class="principle">
+        <div class="n">4</div>
+        <div>
+          <h3>Capture must not be taxed</h3>
+          <p>Every decision demanded at the moment of writing something down is
+          a reason not to write it down at all. Ask for the thing. Ask for
+          nothing else.</p>
+          <p class="where">NeuRoutine's capture is two fields — what it is and
+          what it will cost — where it used to be seven. A one-press capture
+          lands in the inbox rather than on today, because <em>when</em> is a
+          decision too. Meals will log a meal with no calorie count, because
+          most of what anybody eats has never been weighed and demanding a
+          number before food can be marked eaten is how a food app becomes
+          something to avoid.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">5</div>
+        <div>
+          <h3>"Not right now" is a first-class answer</h3>
+          <p>Most software offers done or nothing, which quietly turns every
+          un-done thing into an accusation. A day can be let go of without that
+          being a failure, and a thing can move without being deleted.</p>
+          <p class="where">NeuRoutine gives it its own heading in every entry —
+          skip just today, move to tomorrow, put it back in the inbox — all
+          reversible, and a skipped day costs nothing and counts as nothing. A
+          day that ends with the list let go of says "that is a decision, not a
+          failure" rather than congratulating you. Meals has a safe-food roster
+          one tap away, and clearing a planned meal is not drawn in a warning
+          colour, because it destroys nothing.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">6</div>
+        <div>
+          <h3>Nothing is hidden behind a gesture</h3>
+          <p>A gesture is only ever a shortcut for a control you can see. A
+          swipe nobody can see is a swipe found by accident, and being surprised
+          by your own planner is the thing these apps exist to avoid.</p>
+          <p class="where">Written after an audit found the one place NeuRoutine
+          broke it: deleting a step was a swipe and nothing else, on the app's
+          only destructive control, in the screen meant for reading. It has a
+          visible control now, and the swipe stayed as a shortcut for people who
+          had found it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <h2>What the app is allowed to say about you</h2>
+
+      <div class="principle">
+        <div class="n">7</div>
+        <div>
+          <h3>Report, never score</h3>
+          <p>No streaks, no grades, no targets, no rings to close. A number you
+          can fall short of is a number that will eventually be used against
+          you, and for anyone prone to all-or-nothing thinking a broken streak
+          does not restart — it ends the relationship with the app.</p>
+          <p class="where">NeuRoutine names the heaviest day in a fortnight
+          ("Tue 4 Aug was 13") instead of scoring the fortnight, and reports
+          counts rather than percentages, because "2 of 4" is a fact you can act
+          on and "50%" is a mark. Meals records what was eaten with no target,
+          no bar and no ring — the number is the number. Wiederfind has no
+          streaks and no scores at all.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">8</div>
+        <div>
+          <h3>The app never decides to interrupt</h3>
+          <p>The rule is not "never notify". It is that the <em>app</em> never
+          makes that call. Where an interruption exists at all, the person chose
+          it, once, knowingly, and can un-choose it.</p>
+          <p class="where">NeuRoutine has no notification capability whatsoever
+          and never asks for permission — for the person it is built for, even
+          an opt-in channel is a decision to weigh on every visit. Wiederfind
+          never notifies either. Meals has exactly one: a heads-up a few minutes
+          before a meal, off until you switch it on, naming the meal and nothing
+          else. All three are the same rule, and this is the distinction that
+          lets them differ.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">9</div>
+        <div>
+          <h3>When it cannot see, it says so</h3>
+          <p>An app that guesses when it does not know will eventually be
+          confidently wrong, and being caught out once costs more trust than the
+          guess ever saved. Do less rather than be wrong.</p>
+          <p class="where">NeuRoutine's energy ring shows a dash rather than
+          zero when it cannot reach the shared store, because zero reads as an
+          easy day. A widget that cannot speak for the whole day says "Open
+          NeuRoutine" rather than "all done". Meals' Health integration carries
+          an availability flag and says so in a sentence when the entitlement
+          is refused, and logging still works.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <h2>What you can rely on</h2>
+
+      <div class="principle">
+        <div class="n">10</div>
+        <div>
+          <h3>Say what will happen before it happens</h3>
+          <p>A rule should be knowable in advance, not discovered by being
+          stopped by it. An unexplained refusal reads as a broken app, and it is
+          indistinguishable from one.</p>
+          <p class="where">Wiederfind's answer buttons show the interval each
+          one will produce, and a locked step says why it is locked.
+          NeuRoutine learned this later: a drag that would put a day out of time
+          order still springs back without a dialog, but the rule is now stated
+          under the day it applies to, before anybody meets it.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">11</div>
+        <div>
+          <h3>Predictable beats convenient</h3>
+          <p>Things stay where they were. A screen opens the same way every
+          time, controls do not appear and disappear, and nothing reorders
+          itself out from under a finger. Cleverness that moves the furniture is
+          not a feature.</p>
+          <p class="where">NeuRoutine's planner always opens on the day, never
+          on the view you left it in. Weeks start on Monday everywhere, whatever
+          the locale says, and the month grid is always whole weeks so it never
+          changes shape. Meals keeps the day in time order always, and a logged
+          row does not jump. Wiederfind keeps one vocabulary throughout — a card
+          is a card on every screen.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">12</div>
+        <div>
+          <h3>What you make is yours</h3>
+          <p>No account, no server of ours, no analytics, nothing collected.
+          What you make lives in your own Apple services and syncs through your
+          own private iCloud, which we cannot read — and it stays behind when
+          the app is deleted.</p>
+          <p class="where">NeuRoutine's entries are ordinary events and
+          reminders in your own Calendar and Reminders, editable in Apple's apps
+          and useful if this one disappears tomorrow. That is the strongest form
+          of the rule: not "we will let you export", but "it was never ours to
+          hold". Where an app cannot use Apple's own stores, plain export is the
+          obligation instead.</p>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="n">13</div>
+        <div>
+          <h3>One app, one job</h3>
+          <p>An app that does two things does the second one badly and makes the
+          first one harder to find. A planner is not a journal. A meal planner is
+          not a diet tracker. A catalog of what you own is not a wishlist, a
+          price tracker or a social network.</p>
+          <p class="where">This is the bar every idea has to clear before it
+          becomes a repo, and it is the reason there are several small apps here
+          rather than one large one.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Where the apps do not yet agree</h2>
+    <p>These rules were written down after the apps were built, not before, so
+    they do not describe all three equally yet. Naming the gaps is cheaper than
+    pretending they are not there.</p>
+
+    <div class="gap">
+      <h3>Two apps still cannot be searched</h3>
+      <p>Rule 3 is about time; the same argument applies to finding things, and
+      re-finding something you know you wrote down is exactly the memory work
+      these apps exist to absorb. NeuRoutine gained search this week. Meals'
+      recipe library and Wiederfind's decks still have none — in a card app and
+      a recipe book, which are the two places it would help most.</p>
+    </div>
+
+    <div class="gap">
+      <h3>Meals shows the time of the next meal, not how far off it is</h3>
+      <p>The same gap NeuRoutine had until this week. "17:30" is arithmetic;
+      "in 25 min" is the answer, and a meal planner for people who lose track of
+      time is precisely where that matters.</p>
+    </div>
+
+    <div class="gap">
+      <h3>One of the apps celebrates and the others do not</h3>
+      <p>Wiederfind forbids exclamation marks in its interface on the grounds
+      that they are loud. NeuRoutine finishes a day with "All done for today"
+      and a party emoji. Both cannot be right, and the disagreement has never
+      been settled.</p>
+    </div>
+
+    <div class="gap">
+      <h3>Meals decides what your room is like</h3>
+      <p>It opens dark by default rather than following the system, on the
+      argument that a planner opening white at 17:30 in a dim kitchen is a flash
+      to the face. That is a real argument, and it is also the one place an app
+      here overrides a preference the person already set once. It offers
+      <em>Match system</em>, so the override is undoable — but rule 11 says
+      predictable beats convenient, and the system setting is the predictable
+      one.</p>
+    </div>
+
+    <div class="gap">
+      <h3>Wiederfind shares and the others refuse to</h3>
+      <p>Not an inconsistency, but worth saying plainly: NeuRoutine and Meals
+      rule out sharing entirely, because what they hold is your day and your
+      eating. Wiederfind shares decks and lessons, because a course is content
+      somebody wrote to be used by other people. The line is what is being
+      shared, not whether sharing is allowed.</p>
+    </div>
+
+    <div class="band">
+      <h2>Why write these down at all</h2>
+      <p>Because rules drift. Every one of the gaps above is a rule that was
+      true of one app and quietly untrue of another, and none of them would have
+      been noticed by looking at any single app on its own. NeuRoutine's own
+      rules were <a href="neuroutine/reports/">audited against published research
+      on executive dysfunction</a> in August 2026; two of them turned out to be
+      working against it, and both were fixed the same day.</p>
+      <p>If something here does not match what an app actually does, that is a
+      bug in the app or a bug on this page, and either is worth hearing about:
+      <a href="mailto:support@bleauweb.org">support@bleauweb.org</a>.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap wide">
+    <p><a href="mailto:support@bleauweb.org">support@bleauweb.org</a> · <a href="privacy.html">Site privacy</a></p>
+    <p>© 2026 BleauWeb</p>
+    <p class="legal">Apple, the Apple logo, iPhone, iPad, Mac, iCloud, Siri,
+    Apple Health and the App Store are trademarks of Apple Inc., registered in
+    the U.S. and other countries and regions. IOS is a trademark or registered
+    trademark of Cisco in the U.S. and other countries and is used under
+    license. BleauWeb and its apps are independent of Apple Inc. and have not
+    been endorsed or sponsored by Apple.</p>
+  </div>
+</footer>
+</body>
+</html>

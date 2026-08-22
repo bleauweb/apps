@@ -331,3 +331,57 @@ body.reading main hr { max-width: 46rem; }
 /* The closing note on a wide page is still one sentence of prose, so it wraps
    where prose wraps rather than running the full width of the grid above it. */
 .soon { max-width: 46rem; }
+
+/* ---------------------------------------------------------------------------
+   Principles (/principles.html) — the rules the apps are built on, and where
+   they came from.
+
+   Numbered because they are referred to by number elsewhere, grouped because
+   thirteen unbroken items is a list nobody finishes. Each one states the rule,
+   then why, then where it actually shows up — a principle with no example is a
+   slogan.
+--------------------------------------------------------------------------- */
+
+.pgroup { margin: 2.6rem 0 0; }
+.pgroup > h2 {
+  font-size: 1rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: .5rem;
+  margin: 0 0 .4rem;
+  max-width: none;
+}
+
+.principle {
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  gap: 0 .9rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.principle .n {
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-weight: 650;
+  padding-top: .12rem;
+}
+.principle h3 { margin: 0 0 .5rem; font-size: 1.1rem; max-width: 46rem; }
+.principle p { margin: 0 0 .6rem; }
+.principle p:last-child { margin-bottom: 0; }
+.principle .where {
+  border-left: 2px solid var(--rule);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-size: .93rem;
+}
+.principle .where b { color: var(--ink); font-weight: 600; }
+@media (max-width: 560px) {
+  .principle { grid-template-columns: 1fr; gap: .3rem; }
+}
+
+/* The honest list at the end: where the apps do not yet agree. */
+.gap { border-top: 1px solid var(--rule); padding: 1.1rem 0; }
+.gap h3 { margin: 0 0 .4rem; font-size: 1.02rem; max-width: 46rem; }
+.gap p { margin: 0; color: var(--muted); }
