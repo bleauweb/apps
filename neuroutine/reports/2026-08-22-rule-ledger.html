@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeuRoutine — The Rule Ledger, 22 August 2026</title>
+<meta name="description" content="Every one of NeuRoutine's sixty-five design rules, audited against the published research on executive dysfunction — and the six changes that followed.">
+<meta property="og:site_name" content="NeuRoutine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NeuRoutine — The Rule Ledger">
+<meta property="og:description" content="Sixty-five design rules, audited against the research on executive dysfunction. Fifty-one held. Two worked against the app. The gaps were in what the rules never thought to cover.">
+<meta property="og:url" content="https://apps.bleauweb.org/neuroutine/reports/2026-08-22-rule-ledger.html">
+<meta property="og:image" content="https://apps.bleauweb.org/neuroutine/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NeuRoutine — a planner that stays calm.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../site.css?v=4">
+<link rel="canonical" href="https://apps.bleauweb.org/neuroutine/reports/2026-08-22-rule-ledger.html">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f6fb">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17161c">
+</head>
+<body>
+<header class="site">
+  <div class="wrap wide bar">
+    <a class="brand" href="../"><img src="../icon.png" alt=""><span>NeuRoutine</span></a>
+    <nav class="site" aria-label="Site">
+      <a href="../">Overview</a>
+      <a href="../support.html">Support</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="./" aria-current="page">Reports</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap wide">
+    <div class="prose">
+      <p class="pill">Design audit</p>
+      <h1>The Rule Ledger</h1>
+      <p class="updated">22 August 2026 · every rule in the spec, read back against the research</p>
+
+      <p class="lead">NeuRoutine has accumulated sixty-five design rules, most of
+      them written as absolutes with a reason attached. This is an audit of every
+      one of them against what is actually known about designing for executive
+      dysfunction — and a look at what the rules never thought to cover.</p>
+
+      <h2>The verdict</h2>
+
+      <p>The usual failure mode for a rule-heavy design document is that the rules
+      ossify and start working against the product. That is not what was happening
+      here. Fifty-one of the sixty-five rules are directly supported by published
+      research on ADHD, autism and cognitive accessibility; a further five are
+      invisible engineering discipline that costs the person nothing. Several — the
+      refusal of streaks and scores, the insistence that a skipped day is a decision
+      rather than a failure, the low-energy lens the person turns on for
+      themselves — are ahead of what most shipping planners do.</p>
+
+      <p>Two rules actively worked against the app, and both in the same way: they
+      chose <em>calm</em> over <em>clarity</em> at a moment where clarity was the
+      calmer option. A refused drag that sprang back without a word, and an app that
+      would not speak at the moment something was due, both left the person to infer
+      what had happened.</p>
+
+      <p>The larger finding was elsewhere. The rules are almost all about
+      <strong>restraint</strong> — what the app will not show, will not say, will
+      not decide. There was no rule about <strong>time</strong>, so the app had
+      nothing: not one surface anywhere in it showed time passing, and time
+      blindness is the executive-function difference the whole app is built around.
+      There was no rule about <strong>finding things</strong>, so there was no
+      search at all. A doctrine of restraint is very good at stopping the wrong
+      thing being added. It is completely silent on the right thing being
+      missing.</p>
+
+      <h2>Sixty-five rules, four verdicts</h2>
+      <p class="muted">Every verdict is a word as well as a mark and a colour, which
+      is the app's own rule applied to its review.</p>
+    </div>
+
+    <div class="score">
+      <div class="cell">
+        <div class="n v-hold">51</div>
+        <div class="k v-hold">● Holds</div>
+        <div class="d">Supported by the evidence. Kept as written.</div>
+      </div>
+      <div class="cell">
+        <div class="n v-caveat">7</div>
+        <div class="k v-caveat">◐ Holds, with a caveat</div>
+        <div class="d">Right, but resting on something worth stating out loud.</div>
+      </div>
+      <div class="cell">
+        <div class="n v-against">2</div>
+        <div class="k v-against">▲ Worked against it</div>
+        <div class="d">Cost the person more than it saved them. Both now answered.</div>
+      </div>
+      <div class="cell">
+        <div class="n v-free">5</div>
+        <div class="k v-free">○ Free</div>
+        <div class="d">Engineering discipline. No effect on the person either way.</div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <div class="band">
+        <h2 style="margin-top:0">What changed, the same day</h2>
+        <p>Every finding below has been acted on. Nothing required repealing a rule:
+        four of the six changes filled a gap the rules never addressed, and two
+        closed a contradiction the rules already contained. The app now shows how
+        far off the next thing is without ever making a sound; things can be found;
+        a refused drag explains itself before it happens; deleting a step is no
+        longer hidden behind a swipe; the Inbox says how big it is; and About
+        explains why the app is silent, and what the person can still do about it
+        themselves. Details are in <a href="#shipped">what shipped</a>.</p>
+      </div>
+
+      <h2 id="evidence">Part one — Seven things the research says</h2>
+      <p class="muted">Drawn from the W3C's cognitive-accessibility guidance, recent
+      HCI work on ADHD task management, the autism interface literature, and the
+      pacing literature that spoon theory comes from. Sources are listed at the
+      foot of the page.</p>
+
+      <div class="finding">
+        <h3>1. Support has to arrive at the point of performance</h3>
+        <p>Prospective memory — remembering to do a thing at the moment it needs
+        doing — is disproportionately impaired in ADHD, and knowing what to do is
+        not the problem. Reminders work not by informing but by removing the need to
+        hold a flag in working memory. The strongest effects come from cues delivered
+        <em>at</em> the moment, not from better planning beforehand.</p>
+        <p class="asks"><strong>Asked of this app:</strong> something must exist at
+        13:55 for the 14:00 dentist. The app's answer is ambient rather than
+        interruptive — the Lock Screen widget, the Home Screen widget, the Control
+        Centre button. That is a legitimate answer. It is only a complete one if the
+        ambient channel actually carries the time.</p>
+      </div>
+
+      <div class="finding">
+        <h3>2. The periphery is a real channel, not a consolation prize</h3>
+        <p>Calm-technology work holds that information belongs in the periphery and
+        moves to the centre only when it must; the mere presence of a notification
+        measurably degrades task performance even when it is never opened. Glanceable
+        ambient displays exploit pre-attentive processing and cost almost no
+        deliberate attention.</p>
+        <p class="asks"><strong>Asked of this app:</strong> this is the strongest
+        available defence of the no-notifications rule. An app that says everything
+        on the Lock Screen and interrupts nothing is not a weaker design than one
+        that pushes — it is the design this literature would recommend. But the
+        periphery only works if what sits in it is worth glancing at.</p>
+      </div>
+
+      <div class="finding">
+        <h3>3. Time blindness is the deficit, and it responds to visible time</h3>
+        <p>Difficulty perceiving elapsed and remaining time is a core, well
+        characterised feature of ADHD and a common autistic experience. The
+        intervention with the most consistent support is externalising time: a
+        visible clock, a countdown, a filling bar — something that makes duration
+        perceptible rather than calculated.</p>
+        <p class="asks"><strong>Asked of this app:</strong> NeuRoutine showed time
+        only as a static label. There was no countdown, no relative time and no
+        now-line anywhere in the app or its widgets — verified across all 5,408 lines
+        of it. The model already carried each entry's duration and nothing rendered
+        it. This was the app's largest unmet need, and it was entirely compatible
+        with every rule already written. <span class="v v-done">Shipped</span></p>
+      </div>
+
+      <div class="finding">
+        <h3>4. Streaks and scores backfire on exactly this population</h3>
+        <p>Gamified feedback that hinges on streaks, rankings and daily goals is
+        associated with increased anxiety, guilt and dependency. Loss aversion makes a
+        long streak more painful to break than it was pleasurable to build, and for
+        people prone to all-or-nothing thinking a broken streak commonly ends in
+        abandoning the app rather than restarting.</p>
+        <p class="asks"><strong>Asked of this app:</strong> nothing. This is already
+        settled doctrine here — counts rather than percentages on the rings, the
+        heaviest day <em>named</em> rather than the fortnight <em>scored</em>, no
+        streak of any kind. The one counter-finding worth knowing is that gamified
+        apps show materially higher retention. Retention is not this app's mission,
+        and the rules are right to ignore it.</p>
+      </div>
+
+      <div class="finding">
+        <h3>5. Every choice is a tax, and it compounds</h3>
+        <p>Decision fatigue and decision paralysis hit neurodivergent adults harder
+        and more often; one survey found 58% experiencing decision paralysis at least
+        weekly and 35% daily. The consistent recommendation is to reduce the number
+        of live options rather than to improve the interface for choosing among
+        them.</p>
+        <p class="asks"><strong>Asked of this app:</strong> nothing, and this is
+        where the rules are strongest. Two-field capture, a non-configurable daily
+        budget, three dials rather than a rule engine, five tabs with one verb each,
+        a settings screen that opens by saying it is meant to be left alone. This app
+        treats a settings toggle as a cost, which is the correct and unusual
+        instinct.</p>
+      </div>
+
+      <div class="finding">
+        <h3>6. Autistic users need predictability above nearly everything</h3>
+        <p>The interface literature converges on predictability and consistency as
+        the first requirement: structured layouts, stable controls, no unexpected
+        movement, and above all no abrupt or unexplained feedback, which reads as
+        instability and produces anxiety.</p>
+        <p class="asks"><strong>Asked of this app:</strong> almost everything here is
+        right — fixed positions, a tab that always opens on the same zoom, a switch
+        in one place that is never hunted for. The exception was the drag refused
+        without a word: precisely the abrupt feedback this literature warns about,
+        and indistinguishable from a bug. <span class="v v-done">Shipped</span></p>
+      </div>
+
+      <div class="finding">
+        <h3>7. COGA names the objectives this app is trying to hit</h3>
+        <p>The W3C's <em>Making Content Usable</em> sets objectives with concrete
+        patterns beneath them. Four are directly in scope: <em>Help Users Focus</em>,
+        <em>Help Users Avoid Mistakes</em> (make controls stable, enable
+        reversibility, deliver clear feedback), <em>Ensure Processes Do Not Rely on
+        Memory</em>, and <em>Help Users Find What They Need</em> — whose patterns
+        include highlighting key tasks, surfacing important actions above the fold,
+        and implementing search.</p>
+        <p class="asks"><strong>Asked of this app:</strong> three of the four
+        objectives were met unusually well. <em>Deliver Clear Feedback</em> was missed
+        once. <em>Help Users Find What They Need</em> was met for navigation and
+        missed entirely for retrieval: there was no search anywhere, and no way to
+        answer "where did I put that thing" except by scrolling.
+        <span class="v v-done">Shipped</span></p>
+      </div>
+
+      <h2 id="ledger">Part two — Every rule, and whether it earns its place</h2>
+      <p class="muted">Grouped as the specification groups them. The rule is
+      condensed; the note is the verdict's reason.</p>
+    </div>
+
+    <!-- A -->
+    <section class="ledger">
+      <div class="gh"><h3>A · Capture and entry</h3><span class="tally">5 hold · 1 caveat</span></div>
+
+      <div class="r">
+        <div class="id">A1</div>
+        <div>
+          <div class="what">Two-field capture. Title and energy. Not kind, day, time or visibility.</div>
+          <p class="why">Every decision at capture is a reason not to write the thing down. Directly supported by the decision-fatigue literature and the low-friction-entry finding in the task-initiation work.</p>
+        </div>
+        <div class="verdict"><span class="v v-hold">● Holds</span></div>
+      </div>
+
+      <div class="r">
+        <div class="id">A2</div>
+        <div>
+          <div class="what">A one-press capture lands in the Inbox, not on today.</div>
+          <p class="why">Correct: <em>when</em> is a decision, and a capture button that makes it for you hands the person a day they did not choose. The caveat was the other end — an undated list, newest-first, with no count and no triage order, is where working-memory research predicts things quietly stop existing. <span class="v v-done">Answered by change 5</span></p>
+        </div>
+        <div class="verdict"><span class="v v-caveat">◐ Caveat</span></div>
+      </div>
+
+      <div class="r">
+        <div class="id">A3</div>
+        <div>
+          <div class="what">Read first, edit second. A tap shows notes and steps, not an eleven-field form.</div>
+          <p class="why">Textbook progressive disclosure, and it keeps the destructive control off the reading path.</p>
+        </div>
+        <div class="verdict"><span class="v v-hold">● Holds</span></div>
+      </div>
+
+      <div class="r">
+        <div class="id">A4</div>
+        <div>
+          <div class="what">Delete lives inside the edit screen, so reading an entry never touches it.</div>
+          <p class="why">Sound. The app broke it in exactly one place — steps — which change 3 closed.</p>
+        </div>
+        <div class="verdict"><span class="v v-hold">● Holds</span></div>
+      </div>
+
+      <div class="r">
+        <div class="id">A5</div>
+        <div>
+          <div class="what">No delete intent in Siri or Shortcuts. Removal stays a human action.</div>
+          <p class="why">Irreversibility behind a voice interface is the wrong pairing. Matches COGA's reversibility pattern.</p>
+        </div>
+        <div class="verdict"><span class="v v-hold">● Holds</span></div>
+      </div>
+
+      <div class="r">
+        <div class="id">A6</div>
+        <div>
+          <div class="what">The capture control opens the field with the cursor already in it, and two presses both work.</div>
+          <p class="why">The shortest path the platform has between a thought and a written thought.</p>
+        </div>
+        <div class="verdict"><span class="v v-hold">● Holds</span></div>
+      </div>
+    </section>
+
+    <!-- B -->
+    <section class="ledger">
+      <div class="gh"><h3>B · What a screen is allowed to do</h3><span class="tally">14 hold · 1 caveat</span></div>
+
+      <div class="r"><div class="id">B1</div><div>
+        <div class="what">One filled accent control per screen. On Now, that control is Done.</div>
+        <p class="why">The clearest statement of intent in the whole document. It is what makes the front door survivable on a bad day.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B2</div><div>
+        <div class="what">Five tabs, one verb each: Now · The Plan · Inbox · Energy · Settings.</div>
+        <p class="why">The reshape away from five time-ranges removed real taxonomy work — "what's coming Thursday" no longer has three plausible homes. Verb-based navigation is what COGA's <em>highlight key tasks</em> pattern asks for.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B3</div><div>
+        <div class="what">Inline titles everywhere. Now's title carries the date instead of the word "Now".</div>
+        <p class="why">Reclaims some 120 points on the two screens that most need them, and replaces a redundant label with the one orientation fact the screen lacked.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B4</div><div>
+        <div class="what">The Plan always opens on Day, never on the zoom you left it in.</div>
+        <p class="why">Predictability beats convenience here, and the autism literature is unambiguous about which one to choose.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B5</div><div>
+        <div class="what">The month grid is never the app's front door.</div>
+        <p class="why">Opening on thirty-five days is the wall of tasks this app exists to avoid.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B6</div><div>
+        <div class="what">Nothing inside a month cell is a control; the cell taps through to the day.</div>
+        <p class="why">At 54 points wide, any control inside a cell is a mis-tap waiting to happen. One target, one meaning.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B7</div><div>
+        <div class="what">Week shows at most three entries per day, then "+N more".</div>
+        <p class="why">Content-volume reduction, and the day's total still counts what the list leaves out, so the truncation never lies.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B8</div><div>
+        <div class="what">Daily repeats collapse out of Week and Month but still count in the bars.</div>
+        <p class="why">Seven copies of one truncated title say nothing about the shape of a week. Counting them anyway keeps a routine-only day reading "0 of 13" rather than "clear".</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B9</div><div>
+        <div class="what">The glyph, not the word, for repeat badges. The word goes to VoiceOver.</div>
+        <p class="why">Repeats are the commonest row, and a boxed word on the commonest row becomes the loudest thing on screen. The accessible name carries the meaning the visual drops.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B10</div><div>
+        <div class="what">No per-kind colour coding. Energy load is the only colour that carries meaning.</div>
+        <p class="why">One colour with one job is legible; eight category colours is a legend to memorise. A considered departure from the visual-first approach some neurodivergent planners take — defensible, because their colour carries <em>identity</em> and this app's carries <em>quantity</em>.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B11</div><div>
+        <div class="what">Colour is never the sole carrier of meaning.</div>
+        <p class="why">WCAG 1.4.1, met properly: over-budget says so in a sentence, done is a strikethrough as well as a tone, an energy badge shows its number.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B12</div><div>
+        <div class="what">WCAG 2.1 AA throughout; the accent is two colours because one violet cannot do both jobs.</div>
+        <p class="why">Measured, documented next to the values, and two real failures were found and fixed. Better than most shipping apps manage.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B13</div><div>
+        <div class="what">Reduce Motion respected — the app animates nothing of its own.</div>
+        <p class="why">The sensory literature treats unexpected motion as a direct overload risk. Animating nothing is the strongest possible compliance.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B14</div><div>
+        <div class="what">Dynamic Type through the accessibility sizes, 44-point targets, full VoiceOver labelling.</div>
+        <p class="why">Verified at the largest accessibility size with re-flow rather than truncation. The 44-point floor is on the two commonest controls, which is where it matters.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">B15</div><div>
+        <div class="what">Settings is one of the five tabs, and opens by saying it is meant to be left alone.</div>
+        <p class="why">The copy is excellent and the move off Now's toolbar was right — a gear violated B1. The caveat is arithmetic: the room visited least holds a fifth of the primary navigation, permanently, on the smallest screen, with the same weight as the Inbox. Worth watching; not worth acting on yet. <em>Still open.</em></p>
+      </div><div class="verdict"><span class="v v-caveat">◐ Caveat</span></div></div>
+    </section>
+
+    <!-- C -->
+    <section class="ledger">
+      <div class="gh"><h3>C · The energy model</h3><span class="tally">11 hold · 2 caveat</span></div>
+
+      <div class="r"><div class="id">C1</div><div>
+        <div class="what">The scale is Fibonacci: 0 · 1 · 2 · 3 · 5 · 8 · 13.</div>
+        <p class="why">Nobody can tell a 6 from a 7, and being asked to is its own small tax. Widening gaps make the estimate answerable, which is what makes it get answered at all.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C2</div><div>
+        <div class="what">The daily budget is 13, and is not configurable.</div>
+        <p class="why">The stated reason — a dial gets turned up on the day it should not be — is good, but there is a better one: because the person assigns the numbers themselves, the scale <em>self-calibrates</em>. Somebody with less capacity naturally rates the same task higher, so a fixed 13 stays true without ever asking them to state their capacity as a number. The caveat is only that this defence is not written down, which makes the rule look arbitrary and therefore vulnerable — so it has now been written into the specification next to the rule it defends. <span class="v v-done">Answered</span></p>
+      </div><div class="verdict"><span class="v v-caveat">◐ Caveat</span></div></div>
+
+      <div class="r"><div class="id">C3</div><div>
+        <div class="what">Snapping to the scale rounds ties up, never down.</div>
+        <p class="why">An underestimate books a day you cannot finish; an overestimate leaves an evening free. Only one of those is recoverable at four in the afternoon.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C4</div><div>
+        <div class="what">Completed entries still count toward what the day cost.</div>
+        <p class="why">A day that drained you drained you whether or not the boxes are ticked. This is the single rule that separates an energy meter from a progress bar.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C5</div><div>
+        <div class="what">The audit average counts only days that had something sized.</div>
+        <p class="why">Empty days cannot be allowed to make a punishing fortnight look mild. Correct handling of missing data as missing rather than zero.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C6</div><div>
+        <div class="what">A weekday needs two samples before the app will name it as a pattern.</div>
+        <p class="why">One bad Tuesday is a Tuesday. A statistical floor written into a consumer app is rare and right.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C7</div><div>
+        <div class="what">The app does not give advice. It reports what a day costs and stops.</div>
+        <p class="why">Right on autonomy grounds, and right about the failure mode — an app guessing at a life it cannot see is worse than a silent one. The caveat: the HCI work describes a loop of set → cue → do → feedback → reflect, and this app ran four of those five well. The missing link was the cue, not the advice — so the rule stood and the gap was filled instead. <span class="v v-done">Answered by change 1</span></p>
+      </div><div class="verdict"><span class="v v-caveat">◐ Caveat</span></div></div>
+
+      <div class="r"><div class="id">C8</div><div>
+        <div class="what">The meter never switches to counting tasks when nothing is sized. It simply does not draw.</div>
+        <p class="why">A bar that changes what it measures depending on the data is a bar you cannot read at a glance, which defeats the only reason it exists.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C9</div><div>
+        <div class="what">Category energy is a fact, never a share to balance; the card draws only with two or more categories.</div>
+        <p class="why">Turning "Work 88, Todo 19" into a percentage would invent a target the person never set. Suppressing the single-category case avoids a card that says "all of it".</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C10</div><div>
+        <div class="what">Name the heaviest day — "Tue 4 Aug was 13" — rather than scoring the fortnight.</div>
+        <p class="why">A fact you can act on, where "1 day over budget" is a grade. Directly avoids the shame mechanics the gamification literature documents.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C11</div><div>
+        <div class="what">The Lock Screen rings show counts, not percentages.</div>
+        <p class="why">"2" of four things is actionable; "50%" is a score. The two rings deliberately measuring different things is the app's whole argument at its smallest.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C12</div><div>
+        <div class="what">The energy ring shows "—" rather than zero when it cannot see the shared store.</div>
+        <p class="why">Zero reads as an easy day. The app's best instance of a principle it applies consistently: when you cannot see, say so.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">C13</div><div>
+        <div class="what">The app says "energy", not "spoons", and draws a bolt rather than cutlery.</div>
+        <p class="why">A borrowed metaphor is a word you have to be taught, and a planner should not need a footnote. It also drops the plural agreement that produced "5 energys". The cost — losing a shared community vocabulary — is small and worth paying.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+    </section>
+
+    <!-- D -->
+    <section class="ledger">
+      <div class="gh"><h3>D · Letting go</h3><span class="tally">12 hold</span></div>
+
+      <div class="r"><div class="id">D1</div><div>
+        <div class="what">"Not right now" is a first-class answer, with its own heading in the entry.</div>
+        <p class="why">The strongest rule in the document. Most planners offer done or nothing, which turns every un-done thing into a small accusation. Giving the third answer a name and a place is what stops avoidance turning into abandonment.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D2</div><div>
+        <div class="what">Plain words, one action per line, no swipe. A gesture nobody can see is found by accident.</div>
+        <p class="why">Right, and a principle the whole app should be held to — which is how the audit found the one place it was broken. Restated as the rule it always meant: <em>a gesture is only ever a shortcut for a control you can see.</em> <span class="v v-done">Restated, change 3</span></p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D3</div><div>
+        <div class="what">A skip is not a completion. It lives in its own row and costs the day nothing.</div>
+        <p class="why">Modelling this as a separate fact rather than a flavour of done is what lets the audit stay honest and the widget stay quiet. Ticking something off clearing its skip is the right resolution of the conflict.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D4</div><div>
+        <div class="what">A day where everything was skipped reads "That is a decision, not a failure" — never "All done 🎉".</div>
+        <p class="why">Congratulating somebody for a day they let go of is a small lie they would notice, and noticing it would cost the app its credibility on everything else it says.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D5</div><div>
+        <div class="what">Over budget reads "That is a fact about the day, not about you."</div>
+        <p class="why">Externalising attribution at the exact moment a productivity app usually implies fault. One sentence doing a great deal of work.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D6</div><div>
+        <div class="what">The low-energy switch is the person telling the app, never the app deciding.</div>
+        <p class="why">The correct resolution of the tension in C7: adaptive help without the app inferring anything. The person supplies the one fact only they have, and gets a shorter list rather than a pep talk.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D7</div><div>
+        <div class="what">The switch is on until tomorrow, and never carries forward. No timer, no midnight job.</div>
+        <p class="why">Storing the day it was turned on rather than a boolean is the mechanism that makes "nothing to remember to undo" true. Carrying it forward would be the app deciding how somebody is.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D8</div><div>
+        <div class="what">Anything with a time on it always stays, whatever the low-energy rule says.</div>
+        <p class="why">Hiding an appointment because somebody said they were tired would be a harm dressed as a kindness. Non-negotiable, and correctly implemented as the first line of the predicate rather than as a setting.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D9</div><div>
+        <div class="what">Only Now narrows. The Plan always shows the whole day.</div>
+        <p class="why">The answer to the object-permanence objection: hiding is the risk, and the rule confines it to one screen while leaving the room where the day is true untouched. Now also states how many were set aside, so the narrowing is never silent.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D10</div><div>
+        <div class="what">The day still costs what it costs. The meter and the rings do not move.</div>
+        <p class="why">A lens that changed the numbers would be the app scoring the person a favour it cannot pay. Keeping the measurement fixed is what makes the lens trustworthy enough to use.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D11</div><div>
+        <div class="what">The low-energy rule is three plain dials, deliberately not a rule engine.</div>
+        <p class="why">Every extra condition is another decision to make on the worst day of the month. Keeping unsized things by default — unknown is not the same as heavy — is a genuinely subtle call, made correctly.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">D12</div><div>
+        <div class="what">When the lens leaves nothing, Now says so — never "All done".</div>
+        <p class="why">The same honesty rule as D4, applied to the case that is easiest to get wrong. Three distinct empty states, each true.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+    </section>
+
+    <!-- E -->
+    <section class="ledger">
+      <div class="gh"><h3>E · Arranging the day</h3><span class="tally">2 hold · 1 caveat · 1 against</span></div>
+
+      <div class="r"><div class="id">E1</div><div>
+        <div class="what">The sequence never goes backwards in time.</div>
+        <p class="why">One invariant expressing "part of a day is fixed and part is yours". Untimed entries floating freely between timed ones is exactly the right relaxation of it.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">E2</div><div>
+        <div class="what">A refused drag springs back rather than raising an alert. "Not there" is better said by the row returning.</div>
+        <p class="why"><strong>The premise was right and the conclusion overshot.</strong> An alert would indeed be wrong. But silence is not the only alternative to a dialog, and an unexplained refusal is the abrupt, unaccountable feedback the autism interface literature names as an anxiety source — it is also indistinguishable from a bug, and this app has shipped one in exactly this code path. COGA asks for clear feedback, not for loud feedback. <span class="v v-done">Resolved by change 2</span></p>
+      </div><div class="verdict"><span class="v v-against">▲ Worked against</span></div></div>
+
+      <div class="r"><div class="id">E3</div><div>
+        <div class="what">Moving a repeat moves the whole series, because a repeat is a statement about the routine.</div>
+        <p class="why">The reasoning is sound and the fallback — a hand-arranged day keeps what you gave it — is elegant. The caveat is that nothing on screen says it: the person drags one row on Tuesday and silently changes every Tuesday. One line in the entry's own screen would close this. <em>Still open.</em></p>
+      </div><div class="verdict"><span class="v v-caveat">◐ Caveat</span></div></div>
+
+      <div class="r"><div class="id">E4</div><div>
+        <div class="what">The arrangement is repaired on read, because times move behind it.</div>
+        <p class="why">Prevents yesterday's arrangement showing today's afternoon before its morning. Pure, tested, and the correct place to put the repair.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+    </section>
+
+    <!-- F -->
+    <section class="ledger">
+      <div class="gh"><h3>F · Cues and surfaces</h3><span class="tally">3 hold · 1 caveat · 1 against</span></div>
+
+      <div class="r"><div class="id">F1</div><div>
+        <div class="what">No notifications, at all. The app never notifies, alerts or badges, and never asks for permission.</div>
+        <p class="why">Held, on two independent grounds. First, it is the stated sensory need of the person this app is for, which settles it. Second — and this is the part worth writing into the specification — calm-technology research supports it directly: notifications degrade performance by their mere presence, and the periphery is a real channel rather than a weaker one. The caveat was that "no notifications" was decided as a subtraction and never replaced with a positive rule about what the ambient channel must therefore carry. <span class="v v-done">Answered by changes 1 and 6</span></p>
+      </div><div class="verdict"><span class="v v-caveat">◐ Caveat</span></div></div>
+
+      <div class="r"><div class="id">F2</div><div>
+        <div class="what">On deck is the app's one rule at its smallest: one title, one time, one Done. No counts, no meter, no list.</div>
+        <p class="why">The widget and the front door making the same argument at different sizes is why the app reads as one idea rather than five screens.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">F3</div><div>
+        <div class="what">Widgets narrow with Now and can never disagree with the app.</div>
+        <p class="why">Shared provider, shared predicate, shared store. A widget that disagreed with the phone would cost more trust than it ever earned.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">F4</div><div>
+        <div class="what">A widget that cannot see the whole picture says "Open NeuRoutine" rather than "all done".</div>
+        <p class="why">Degrading by doing less rather than by being wrong. The same principle as C12, and keeping the code path is cheap insurance.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">F5</div><div>
+        <div class="what">Timed entries carry no alarm either — the planned per-entry alert was removed with the notifications.</div>
+        <p class="why"><strong>The sharp edge of F1, and it went further than the sensory need required.</strong> An alarm the person sets themselves, on one specific appointment, is not an interruption channel — it is a tool they chose, once, knowingly. Removing it did not reduce overstimulation; it removed the only mechanism that could answer the point-of-performance finding for a 14:00 dentist. The capability already exists on the device, because the entries are real calendar events; nobody had told them. <span class="v v-done">Answered by change 6</span></p>
+      </div><div class="verdict"><span class="v v-against">▲ Worked against</span></div></div>
+    </section>
+
+    <!-- G -->
+    <section class="ledger">
+      <div class="gh"><h3>G · Data that must never be lost</h3><span class="tally">2 hold · 4 free</span></div>
+
+      <div class="r"><div class="id">G1</div><div>
+        <div class="what">Never downgrade or rewrite a recurrence rule the app cannot express. Show it as text and disable the editor.</div>
+        <p class="why">Not just a data rule — silently flattening somebody's recurrence is a trust failure they would discover weeks later, in the worst possible way.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">G2</div><div>
+        <div class="what">Every sidecar field decodes with a default rather than throwing on a missing key.</div>
+        <p class="why">Written after a synthesised decoder silently orphaned every number ever entered. Invisible to the person, and the reason their numbers are still there.</p>
+      </div><div class="verdict"><span class="v v-free">○ Free</span></div></div>
+
+      <div class="r"><div class="id">G3</div><div>
+        <div class="what">On disk the energy field is still named for the metaphor it came from.</div>
+        <p class="why">Renaming would have loaded cleanly and returned every entry unsized. The right instinct: rename the vocabulary, never the storage.</p>
+      </div><div class="verdict"><span class="v v-free">○ Free</span></div></div>
+
+      <div class="r"><div class="id">G4</div><div>
+        <div class="what">Every identifier Apple sees keeps the old name, for good.</div>
+        <p class="why">Bundle ids, app group, iCloud container, URL scheme, defaults keys. Changing any would orphan shipped data. Correctly scoped: new calendars are named NeuRoutine, existing ones are used as-is and never renamed.</p>
+      </div><div class="verdict"><span class="v v-free">○ Free</span></div></div>
+
+      <div class="r"><div class="id">G5</div><div>
+        <div class="what">Energy stays optional. Never make it a plain number.</div>
+        <p class="why">"Nobody has sized this" and "this costs nothing" are different facts, and collapsing them would break the audit, the low-energy rule and the meter at once.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">G6</div><div>
+        <div class="what">The dynamic-colour provider must not be actor-isolated.</div>
+        <p class="why">Diagnosed from a device crash report after the simulator refused to reproduce it. Pure engineering; no design content.</p>
+      </div><div class="verdict"><span class="v v-free">○ Free</span></div></div>
+    </section>
+
+    <!-- H -->
+    <section class="ledger">
+      <div class="gh"><h3>H · What the app refuses to be</h3><span class="tally">2 hold · 1 caveat · 1 free</span></div>
+
+      <div class="r"><div class="id">H1</div><div>
+        <div class="what">No sharing, no visibility field, no multi-user anything.</div>
+        <p class="why">Dropping the field from the model rather than storing and ignoring it is the honest version of a non-goal.</p>
+      </div><div class="verdict"><span class="v v-free">○ Free</span></div></div>
+
+      <div class="r"><div class="id">H2</div><div>
+        <div class="what">No Apple Watch app. A glance you cannot act on is not worth a target.</div>
+        <p class="why">The constraint is real — the calendar framework is read-only on watchOS — and the reasoning is sound. The caveat is that the wrist is the purest ambient channel available, and this app's philosophy wants ambient channels more than most. Worth revisiting only if the limitation lifts. <em>Still open.</em></p>
+      </div><div class="verdict"><span class="v v-caveat">◐ Caveat</span></div></div>
+
+      <div class="r"><div class="id">H3</div><div>
+        <div class="what">No account, no server, no analytics. iCloud is the account.</div>
+        <p class="why">Removes a whole class of setup decisions, and the Settings copy explains it in one honest paragraph rather than a privacy policy.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+
+      <div class="r"><div class="id">H4</div><div>
+        <div class="what">Onboarding is three fixed steps with the permission ask last, so it arrives explained.</div>
+        <p class="why">COGA's <em>disclose costs upfront</em> pattern, done properly. A quiet dot indicator and no animation keeps first contact consistent with everything after it.</p>
+      </div><div class="verdict"><span class="v v-hold">● Holds</span></div></div>
+    </section>
+
+    <div class="prose">
+      <h2 id="shipped">Part three — What shipped</h2>
+      <p class="muted">All six, on 22 August 2026. None of them required repealing a
+      rule.</p>
+
+      <div class="shipped">
+        <div class="item">
+          <h3>1 · Time is visible, and still never sounded</h3>
+          <p>The focus card and both widgets now carry the time <em>and</em> how far
+          off it is — "in 25 min", "on now · 20 min left", "10 min ago". In the app
+          it re-renders on the minute, because a screen left open for an hour still
+          saying "in 25 min" would be exactly the quiet wrongness the app refuses
+          everywhere else. In the widgets, one read of the day fills a timeline of
+          render-times five minutes apart.</p>
+          <p>Three rules hold it honest. It <strong>rounds down</strong>, so it never
+          says there is more time than there is — the same logic that makes the
+          energy scale round ties up. It <strong>goes quiet past eight hours</strong>,
+          because "13 hours ago" about a morning that got away from you is the app
+          keeping score rather than a fact anybody can act on. And it is
+          <strong>never advice</strong>: it reports where the clock is and stops.</p>
+        </div>
+
+        <div class="item">
+          <h3>2 · A refused drag explains itself before it happens</h3>
+          <p>The row still springs back without a word — an alert explaining a rule
+          is worse than the row simply returning. But the rule no longer waits to be
+          discovered by being stopped by it. A quiet line sits under the day whenever
+          it holds more than one entry and at least one has a time: <em>"Things with
+          a time keep their place in the day. Anything without one can be dragged
+          anywhere."</em> Present before the refusal rather than triggered by it, so
+          nothing pops and nobody has to be told "no" to find out why.</p>
+        </div>
+
+        <div class="item">
+          <h3>3 · Deleting a step came out of hiding</h3>
+          <p>It was a swipe and nothing else: the app's single hidden gesture,
+          attached to its one destructive control, in the screen whose whole purpose
+          is reading. Steps are <em>added</em> there in the open; removing one now has
+          a visible control in the open too, and the swipe stays as a shortcut for
+          anyone who found it. The rule it broke is restated as the rule it always
+          meant: <em>a gesture is only ever a shortcut for a control you can see.</em></p>
+        </div>
+
+        <div class="item">
+          <h3>4 · Things can be found</h3>
+          <p>Search over titles, notes and steps, in the two rooms that hold lists —
+          The Plan's day and the Inbox. The inbox first, then the days nearest today,
+          because a thing with no day yet is the commonest answer to "where did I put
+          that" and the occurrence you can act on is the one worth handing back. A
+          repeat answers once, on the occurrence closest to now. Results carry the day
+          they are on, and are never draggable: an arrangement belongs to a day, and a
+          result list is not one.</p>
+        </div>
+
+        <div class="item">
+          <h3>5 · The Inbox says how big it is</h3>
+          <p><em>"7 things waiting"</em>, and directly under it <em>"Nothing in here
+          is overdue — the inbox holds the things that have no day yet."</em> The
+          count is a fact, never a badge; without the second line a number on a list
+          of unfinished things reads as a debt, which is the one thing this room must
+          not become. Oldest-first is available as the other order, because the oldest
+          capture is the one most likely to have been forgotten — and it is not
+          remembered between visits, for the same reason The Plan always opens on
+          Day.</p>
+        </div>
+
+        <div class="item">
+          <h3>6 · About says why the app is silent</h3>
+          <p>That NeuRoutine never notifies and never asks to — and then, because the
+          entries are real events in Calendar and real reminders in Reminders, that
+          an alert can be added to one particular entry <em>there</em> if it is ever
+          wanted. The rule is that <strong>the app</strong> never decides to
+          interrupt. It was never that the person may not decide, once, about one
+          appointment they cannot miss. The choice already existed on the device;
+          nobody had told them.</p>
+        </div>
+      </div>
+
+      <h2>What was left alone</h2>
+      <ul>
+        <li><strong>One filled control per screen.</strong> Everything else in the app is downstream of this.</li>
+        <li><strong>Two-field capture.</strong> The moment the app must not tax.</li>
+        <li><strong>"Not right now" as a first-class answer.</strong> The rules most likely to be the reason this app is still open in six months.</li>
+        <li><strong>The person turns the low-energy lens on themselves</strong>, and the day still costs what it costs.</li>
+        <li><strong>Counts, not scores. Facts, not grades.</strong> No streak, ever.</li>
+        <li><strong>When the app cannot see, it says so.</strong> This is what makes everything else it says believable.</li>
+      </ul>
+
+      <div class="band">
+        <h2 style="margin-top:0">The rule the doctrine was missing</h2>
+        <p>Almost every rule here is a rule about what <em>not</em> to do, and both
+        gaps this audit found were things that were never added because nothing
+        required them. One positive rule now balances the set, and new work is checked
+        against it: <em>the app must always be able to answer "what now, and how long
+        have I got" without being asked, and without making a sound.</em></p>
+      </div>
+
+      <h2>Method</h2>
+      <p class="muted">Rules were extracted from the app's specification and
+      cross-checked against the implementation — 5,408 lines of Swift across the app,
+      the widget extension and the shared model. Claims about what the app did or did
+      not do were verified in the source rather than read off the specification: the
+      absence of any timing surface, of any search affordance, of per-entry alarms and
+      of all notification code were each confirmed by searching the whole tree. The
+      six changes were built, unit-tested and checked by hand on a simulator the same
+      day.</p>
+
+      <h2>Sources</h2>
+      <ol class="srcs">
+        <li><a href="https://www.w3.org/TR/coga-usable/design_guide.html">Making Content Usable for People with Cognitive and Learning Disabilities — Design Guide</a>, W3C</li>
+        <li><a href="https://arxiv.org/html/2603.17258v1">"Not Just Me and My To-Do List": Understanding Challenges of Task Management for Adults with ADHD</a>, arXiv</li>
+        <li><a href="https://arxiv.org/html/2507.06864v1">Toward Neurodivergent-Aware Productivity: A Systems and AI-Based Human-in-the-Loop Framework</a>, arXiv</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479790/">SwapMyMood: User-Centered Design of a Mobile App to Support Executive Function</a>, PMC</li>
+        <li><a href="https://www.simplypsychology.com/articles/adhd-time-blindness-management">Time Blindness in ADHD: What It Is and Evidence-Based Strategies</a>, Simply Psychology</li>
+        <li><a href="https://www.occupationaltherapy.com/articles/time-blindness-critical-executive-function-5790">Time Blindness: A Critical Executive Function in Adults with ADHD</a>, OccupationalTherapy.com</li>
+        <li><a href="https://ixdf.org/literature/topics/calm-computing">Calm Computing</a>, Interaction Design Foundation</li>
+        <li><a href="https://www.tiimoapp.com/resource-hub/sensory-design-neurodivergent-accessibility">Sensory-Friendly Design for ADHD and Autism Planning</a>, Tiimo</li>
+        <li><a href="https://nerdsip.com/blog/gamification-gone-wrong-when-streaks-become-the-point">Gamification Gone Wrong: When Streaks and Badges Become the Point</a>, NerdSip</li>
+        <li><a href="https://arxiv.org/pdf/2203.16175">When Gamification Spoils Your Learning: Gamification Misuse in a Language-Learning App</a>, arXiv</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12438291/">ADHD and Decision Paralysis: Overwhelm in a World of Choices</a>, PMC</li>
+        <li><a href="https://www.neurodiversecounselingllc.com/post/decision-fatigue-in-neurodivergent-life-tips-for-streamlining-choices">Neurodivergent Decision Fatigue: Simplifying Choices</a>, Neurodiverse Counseling</li>
+        <li><a href="https://uxpa.org/designing-for-autism-in-ux/">Designing for Autism in UX</a>, UXPA International</li>
+        <li><a href="https://uxdesign.cc/designing-for-autistic-people-overview-of-existing-research-d6f6dc20710e">Designing for Autistic People — Overview of Existing Research</a>, UX Collective</li>
+        <li><a href="https://health.clevelandclinic.org/spoon-theory-chronic-illness">What Is the Spoon Theory Metaphor for Chronic Illness?</a>, Cleveland Clinic</li>
+        <li><a href="https://www.tiimoapp.com/resource-hub/task-initiation-adhd">Task Initiation Tactics for ADHD Adults</a>, Tiimo</li>
+      </ol>
+
+      <hr>
+      <p class="muted">Questions or corrections: <a href="mailto:support@bleauweb.org">support@bleauweb.org</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap wide">
+    <p><strong>NeuRoutine</strong> is a <a href="../../">BleauWeb</a> app.</p>
+    <p><a href="mailto:support@bleauweb.org">support@bleauweb.org</a> · <a href="../../privacy.html">Site privacy</a></p>
+    <p>© 2026 BleauWeb</p>
+    <p class="legal">Apple, the Apple logo, iPhone, iPad, Mac, iCloud, Siri,
+    Apple Health and the App Store are trademarks of Apple Inc., registered in
+    the U.S. and other countries and regions. IOS is a trademark or registered
+    trademark of Cisco in the U.S. and other countries and is used under
+    license. BleauWeb and its apps are independent of Apple Inc. and have not
+    been endorsed or sponsored by Apple.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -255,3 +255,130 @@ footer.site .legal {
   margin-top: 1.1rem;
   opacity: .75;
 }
+
+/* ---------------------------------------------------------------------------
+   Reports (/reports/) — the design audits, in the same visual language as the
+   rest of the site. A ledger is a table of judgements, so it is ruled rows
+   rather than cards: sixty-five cards would be a wall, which is the thing the
+   app this documents exists to avoid.
+
+   Every verdict is a word *and* a mark *and* a colour, never colour alone —
+   the app's own rule (WCAG 1.4.1) applied to the page that audits it.
+--------------------------------------------------------------------------- */
+
+:root {
+  --ok: #2f6b4f;
+  --warn: #8a5a05;
+  --bad: #a3342f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ok: #7fc49f;
+    --warn: #e0b267;
+    --bad: #ec8c86;
+  }
+}
+
+/* The count of each verdict, up front. */
+.score {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 1.6rem 0 2.4rem;
+}
+.score .cell {
+  background: var(--card);
+  padding: 1rem 1.1rem;
+}
+.score .n {
+  font-size: 1.9rem;
+  font-weight: 650;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.score .k { font-weight: 600; font-size: .92rem; }
+.score .d { color: var(--muted); font-size: .88rem; line-height: 1.45; }
+@media (max-width: 620px) { .score { grid-template-columns: repeat(2, 1fr); } }
+
+/* Verdict chips. */
+.v { font-weight: 600; font-size: .86rem; white-space: nowrap; }
+.v-hold   { color: var(--ok); }
+.v-caveat { color: var(--warn); }
+.v-against{ color: var(--bad); }
+.v-free   { color: var(--muted); }
+.v-done   { color: var(--accent); }
+
+/* One rule, its reasoning and its verdict. */
+.ledger { margin: 1.2rem 0 2.6rem; }
+.ledger .gh {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: .5rem;
+  margin-bottom: .2rem;
+}
+.ledger .gh h3 { margin: 0; font-size: 1.05rem; }
+.ledger .gh .tally { color: var(--muted); font-size: .85rem; }
+.r {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr) 9.5rem;
+  gap: .2rem 1rem;
+  padding: .85rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+.r .id { color: var(--muted); font-size: .85rem; font-variant-numeric: tabular-nums; }
+.r .what { font-size: .98rem; }
+.r .why { color: var(--muted); font-size: .9rem; line-height: 1.55; margin: .3rem 0 0; }
+.r .verdict { justify-self: end; text-align: right; }
+@media (max-width: 720px) {
+  .r { grid-template-columns: 2.6rem minmax(0, 1fr); }
+  .r .verdict { grid-column: 2; justify-self: start; text-align: left; }
+}
+
+/* A research finding, and what it asked of the app. */
+.finding { border-top: 1px solid var(--rule); padding: 1.4rem 0; }
+.finding h3 { margin: 0 0 .5rem; font-size: 1.05rem; }
+.finding p { margin: 0 0 .7rem; }
+.finding .asks {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-size: .93rem;
+  margin: 0;
+}
+.finding .asks strong { color: var(--ink); }
+
+/* What shipped, as a result. */
+.shipped { margin: 1.4rem 0 0; }
+.shipped .item {
+  border-top: 1px solid var(--rule);
+  padding: 1.2rem 0;
+}
+.shipped h3 { margin: .2rem 0 .5rem; font-size: 1.05rem; }
+.shipped p { margin: 0 0 .6rem; }
+.shipped p:last-child { margin-bottom: 0; }
+
+/* Sources. */
+ol.srcs { color: var(--muted); font-size: .92rem; padding-left: 1.3rem; }
+ol.srcs li { margin: .45rem 0; }
+
+/* The index of reports. */
+.reports { list-style: none; padding: 0; margin: 1.6rem 0 0; }
+.reports li {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  margin: 0 0 .8rem;
+}
+.reports h2 { margin: 0 0 .25rem; font-size: 1.08rem; }
+.reports .when { color: var(--muted); font-size: .88rem; margin: 0 0 .5rem; }
+.reports p.sum { margin: 0; color: var(--muted); font-size: .95rem; }
