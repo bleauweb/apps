@@ -271,3 +271,52 @@ ul.dl > li {
 ol.steps { padding-left: 1.3rem; margin: 1rem 0 0; }
 ol.steps li { margin: .5rem 0; }
 ol.steps li::marker { color: var(--accent); font-weight: 600; }
+
+/* ---------------------------------------------------------------------------
+   Page width: two kinds of page, and each page says which it is on its <body>.
+
+   **Wide** (the default) — built out of grids, cards and side-by-side rows
+   that genuinely need the room: the front door, the app overviews, About.
+
+   **Reading** (`<body class="reading">`) — a single column of prose: support,
+   privacy, downloads, the reports. The whole wrap narrows, so the header, the
+   text and the footer share the same left *and* right edge, and the space left
+   over is an even margin down both sides instead of a ragged gap down one.
+
+   This lives on the container rather than on a .prose div inside it, because
+   the div had to be remembered on every page and was not: ten of the fifteen
+   pages here never got one and ran text the full 66rem — about a hundred and
+   fifty characters a line. A page should have to declare what kind of page it
+   is, and nothing else.
+--------------------------------------------------------------------------- */
+body.reading .wrap { max-width: 46rem; }
+
+/* The front door's opening block.
+   A readable measure leaves room to its right on a wide screen, so the four
+   promises stand in it instead of stacking underneath — the one place on the
+   site where that space had something true to put in it. Below 900px they go
+   back to a row under the words. */
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
+  gap: 2.6rem;
+  align-items: start;
+  margin-bottom: 2.4rem;
+}
+.intro .prose { max-width: none; }
+.intro .prose .tagline, .intro .prose p:last-child { margin-bottom: 0; }
+.intro ul.promises { flex-direction: column; align-items: flex-start; margin: .4rem 0 0; }
+@media (max-width: 900px) {
+  .intro { grid-template-columns: 1fr; gap: 1.3rem; }
+  .intro ul.promises { flex-direction: row; }
+}
+
+/* A band spans the whole column, because that is what makes it a band — but
+   its words still wrap where words should. Without this the paragraphs inside
+   ran the full 66rem, which was the same hundred-and-fifty-character line the
+   reading pages were fixed to avoid, hiding inside a card. */
+.band > * { max-width: 46rem; }
+
+/* The closing note on a wide page is still one sentence of prose, so it wraps
+   where prose wraps rather than running the full width of the grid above it. */
+.soon { max-width: 46rem; }
