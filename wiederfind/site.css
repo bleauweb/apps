@@ -257,23 +257,34 @@ footer.site .legal {
 }
 
 /* ---------------------------------------------------------------------------
-   Page width: two kinds of page, and each page says which it is on its <body>.
+   Page width: every page on this site is the same width on a desktop.
 
-   **Wide** (the default) — built out of grids, cards and side-by-side rows
-   that genuinely need the room: the front door, the app overviews, About.
+   The container is 66rem everywhere — the front door, the app overviews, the
+   support and privacy pages, the downloads page, the reports. Header, content
+   and footer therefore share one left edge and one right edge on every page,
+   and moving between two pages never shifts the furniture.
 
-   **Reading** (`<body class="reading">`) — a single column of prose: support,
-   privacy, downloads, the reports. The whole wrap narrows, so the header, the
-   text and the footer share the same left *and* right edge, and the space left
-   over is an even margin down both sides instead of a ragged gap down one.
-
-   This lives on the container rather than on a .prose div inside it, because
-   the div had to be remembered on every page and was not: ten of the fifteen
-   pages here never got one and ran text the full 66rem — about a hundred and
-   fifty characters a line. A page should have to declare what kind of page it
-   is, and nothing else.
+   `<body class="reading">` does not change that. It marks a page that is
+   mostly prose, and narrows **the words** rather than the page: paragraphs,
+   headings and lists wrap at a readable measure while cards, tables and bands
+   go on spanning the full column. The first attempt narrowed the whole wrap
+   instead, which fixed the line length and broke the thing that matters more —
+   every reading page sat inboard of every other page, and the header jumped
+   when you clicked between them.
 --------------------------------------------------------------------------- */
-body.reading .wrap { max-width: 46rem; }
+
+/* Inside a reading page the .prose helper would narrow whole blocks, cards
+   included; the per-element caps below do that job more precisely. */
+body.reading .prose { max-width: none; }
+
+body.reading main p,
+body.reading main h1,
+body.reading main h2,
+body.reading main h3,
+body.reading main ol,
+body.reading main dl,
+body.reading main ul:not(.dl):not(.reports),
+body.reading main hr { max-width: 46rem; }
 
 /* A band spans the whole column, because that is what makes it a band — but
    its words still wrap where words should. Without this the paragraphs inside
